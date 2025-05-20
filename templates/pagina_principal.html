@@ -1,11 +1,33 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Página Principal</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main_pag_principal.css') }}">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-    
+
+  {% include 'header.html' %}
+
+  <section class="carrossel">
+    <div class="carrossel-container">
+      <h1>Carrossel</h1> 
+    </div>
+  </section>
+
+  <section class="categorias">
+    <h2>CATEGORIAS</h2>
+    <div class="botoes-categorias">
+      <button>CALÇADOS</button>
+      <button>BERMUDAS</button>
+      <button>CAMISAS</button>
+      <button>MOLETONS</button>
+      <button>TODOS</button>
+    </div>
+  </section>
+
+  {% include 'footer.html' %}
+
 </body>
 </html>

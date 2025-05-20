@@ -1,0 +1,88 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-header {
+  background-color: #dcdcdc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.logo {
+  background-color: #b200ff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+
+.material-icons {
+  font-size: 24px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+
+.carrossel {
+  padding: 30px 0; 
+}
+
+.carrossel-container {
+  background-color: #dcdcdc;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.categorias {
+  text-align: center;
+  padding: 30px 0;
+}
+
+.botoes-categorias button {
+  margin: 5px 10px;
+  padding: 10px 20px;
+  background-color: #e0e0e0;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* FOOTER SEMPRE NO FINAL */
+.main-footer {
+  background-color: #dcdcdc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  margin-top: auto; 
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.footer-right span {
+  margin-left: 15px;
+  cursor: pointer;
+}

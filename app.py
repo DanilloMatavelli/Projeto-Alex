@@ -6,5 +6,10 @@ app = Flask(__name__)
 def principal():
     return render_template('pagina_principal.html')
 
+@app.route('/login')
+def pagina_login():
+    return render_template('login.html')
+
+
 if __name__ == '__main__':
     app.run(debug=True)

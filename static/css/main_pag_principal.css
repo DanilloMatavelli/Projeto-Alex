@@ -9,19 +9,19 @@ body {
 }
 
 .header {
-  background-color: var(--cor-primaria);
+  background-color: var(--cor-gradient-1);
   padding: 1rem 2rem;
-  color: white;
+  color: var(--branco);
 }
 
 .footer {
-  background-color: var(--cor-primaria);
+  background-color: var(--cor-gradient-1);
   padding: 1rem 2rem;
-  color: white;
+  color: var(--branco);
 }
 
 .carrossel {
-  background-color: white;
+  background-color: var(--branco);
   padding: 2rem;
   text-align: center;
 }

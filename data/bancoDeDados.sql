@@ -123,107 +123,109 @@ select * from tb_produto;
 
 -- Fotos dos produtos calçados
 -- Produto 1: Tênis Corrida X1
-INSERT INTO tb_foto_produto (cod_produto, url) VALUES (1, 'https://example.com/imagens/tenis_corrida_x1.jpg');
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (1, 'https://cdn.vnda.com.br/1000x800/velocita/2024/11/12/14_58_04_933_14_11_1_169_1147910fstc1.jpg?v=1731434322');
 -- Produto 2: Chinelo Conforto Max
-INSERT INTO tb_foto_produto (cod_produto, url) VALUES (1, 'https://example.com/imagens/chinelo_conforto_max.jpg');
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (1, 'https://m.media-amazon.com/images/I/81gCNdzb8fL._AC_SY695_.jpg');
 -- Produto 3: Bota Adventure Pro
-INSERT INTO tb_foto_produto (cod_produto, url) VALUES (3, 'https://example.com/imagens/bota_adventure_pro.jpg');
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (3, 'https://a-static.mlcdn.com.br/800x560/bota-coturno-masculina-motoqueiro-adventure-pro-force-150-proforce/scaf/16239594/4ff1149e429c2d988ffe18ea7bae90a1.jpeg');
 -- Produto 4: Sapato Social Clássico
 INSERT INTO tb_foto_produto (cod_produto, url) VALUES (4, 'https://example.com/imagens/sapato_social_classico.jpg');
 -- Produto 5: Tênis Casual Urbano
-INSERT INTO tb_foto_produto (cod_produto, url) VALUES (5, 'https://example.com/imagens/tenis_casual_urbano.jpg');
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (5, 'https://static.zattini.com.br/produtos/sapato-masculino-democrata-oliver-social-classico-cadarco-couro-conforto-273202/06/D83-4415-006/D83-4415-006_zoom1.jpg?ts=1705309530&ims=1088x');
 -- Produto 6: Sapatênis Versátil
-INSERT INTO tb_foto_produto (cod_produto, url) VALUES (6, 'https://example.com/imagens/sapatenis_versatil.jpg');
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (6, 'https://pegada.vtexassets.com/arquivos/ids/190228-1200-1200?v=638821448799000000&width=1200&height=1200&aspect=true');
 -- Produto 7: Sandália Masculina Couro
-INSERT INTO tb_foto_produto (cod_produto, url) VALUES (7, 'https://example.com/imagens/sandalia_masculina_couro.jpg');
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (7, 'https://static.netshoes.com.br/produtos/sandalia-couro-pegada-nordeste-amortech-masculina/38/E21-1621-138/E21-1621-138_zoom1.jpg?ts=1695716647&ims=1088x');
 -- Produto 8: Chuteira Society
-INSERT INTO tb_foto_produto (cod_produto, url) VALUES (8, 'https://example.com/imagens/chuteira_society.jpg');
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (8, 'https://static.netshoes.com.br/produtos/chuteira-society-adidas-deportivo-ii-unissex-exclusiva/70/FB9-4074-070/FB9-4074-070_zoom1.jpg?ts=1710336224&ims=1088x');
 -- Produto 9: Tênis Infantil Light
 INSERT INTO tb_foto_produto (cod_produto, url) VALUES (9, 'https://example.com/imagens/tenis_infantil_light.jpg');
 
 -- Fotos dos produtos camisas
 -- Produto 19: Camisa Polo Clássica
-INSERT INTO tb_foto_produto (cod_produto, url) VALUES (19, 'https://example.com/imagens/camisa_polo_classica.jpg');
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (19, 'https://d1zvfmhlebc91g.cloudfront.net/fit-in/0x0/filters:fill(ffffff)/filters:quality(98)/n49shopv2_spazziojeans/images/products/80512_polo-piquet-classica-054-pr-1615-0067587_z2_638122377654539294.jpg');
 
 -- Produto 20: Camisa Social Slim
-INSERT INTO tb_foto_produto (cod_produto, url) VALUES (20, 'https://example.com/imagens/camisa_social_slim.jpg');
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (20, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmISaXBZdSO4LaeBFlhHzwBP1pjKeIphhDEQ&s');
 
 -- Produto 21: Camisa Xadrez Masculina
-INSERT INTO tb_foto_produto (cod_produto, url) VALUES (21, 'https://example.com/imagens/camisa_xadrez_masculina.jpg');
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (21, 'https://http2.mlstatic.com/D_NQ_NP_2X_841044-MLB80018016887_102024-F-camisa-xadrez-masculina-manga-longa-lenhador-coleco-vero.webp');
 
 -- Produto 22: Camisa Manga Longa Linho
-INSERT INTO tb_foto_produto (cod_produto, url) VALUES (22, 'https://example.com/imagens/camisa_manga_longa_linho.jpg');
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (22, 'https://cdn.awsli.com.br/2500x2500/1300/1300343/produto/131296244/myr-23-0924818-01jlks41ds.jpg');
 
 -- Produto 23: Camisa Estampada Tropical
-INSERT INTO tb_foto_produto (cod_produto, url) VALUES (23, 'https://example.com/imagens/camisa_estampada_tropical.jpg');
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (23, 'https://images.tcdn.com.br/img/img_prod/970725/camisa_manga_curta_estampa_tropical_14521_7_56a4b56ee92ab2d6b17c2ddcc7b66057.jpg');
 
 -- Produto 24: Camisa Jeans Masculina
-INSERT INTO tb_foto_produto (cod_produto, url) VALUES (24, 'https://example.com/imagens/camisa_jeans_masculina.jpg');
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (24, 'https://lojasfirenzo.com/cdn/shop/files/S52c4bdec23fb4f43aa0e1d86e6694800U_800x.webp?v=1741104556');
 
 -- Produto 25: Camisa Básica Algodão
-INSERT INTO tb_foto_produto (cod_produto, url) VALUES (25, 'https://example.com/imagens/camisa_basica_algodao.jpg');
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (25, 'https://www.insiderstore.com.br/cdn/shop/files/Foto-01_5.png?v=1748540783&width=1206');
 
 -- Produto 26: Camisa Oversized Unissex
-INSERT INTO tb_foto_produto (cod_produto, url) VALUES (26, 'https://example.com/imagens/camisa_oversized_unissex.jpg');
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (26, 'https://acdn-us.mitiendanube.com/stores/417/579/products/aot2-534d96be503c736f2b17302525621006-1024-1024.png');
 
 -- Produto 27: Camisa Esportiva Dry
-INSERT INTO tb_foto_produto (cod_produto, url) VALUES (27, 'https://example.com/imagens/camisa_esportiva_dry.jpg');
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (27, 'https://www.lojamirante.com.br/uploads/dirImage/16/524x520_acf3fde08c45a2cf47a75b8c1a3c652a.webp');
 
 -- Fotos dos produtos Bermudas
 -- Produto 10: Bermuda Jeans Tradicional
-INSERT INTO tb_foto_produto (cod_produto, url) VALUES (10, 'https://example.com/imagens/bermuda_jeans_tradicional.jpg');
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (10, 'https://img.ltwebstatic.com/images3_spmp/2023/09/15/c3/169472886264322ad34c6a0f5f2e8fbfed6680c59e_thumbnail_405x.webp');
 
 -- Produto 11: Bermuda Moletom Basic
-INSERT INTO tb_foto_produto (cod_produto, url) VALUES (11, 'https://example.com/imagens/bermuda_moletom_basic.jpg');
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (11, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyDmSKGwyIXKRbkZxa3YGszqXJMfMlkcw9PA&s');
 
 -- Produto 12: Bermuda Sarja Slim
-INSERT INTO tb_foto_produto (cod_produto, url) VALUES (12, 'https://example.com/imagens/bermuda_sarja_slim.jpg');
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (12, 'https://img.lojasrenner.com.br/item/563990870/original/13.jpg');
 
 -- Produto 13: Bermuda Tática Militar
-INSERT INTO tb_foto_produto (cod_produto, url) VALUES (13, 'https://example.com/imagens/bermuda_tatica_militar.jpg');
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (13, 'https://www.camagli.com.br/cdn/shop/products/5df9b61093ca13a7b9e5ba88fd2d749d_c65df500-b45c-4e19-af85-9040befa6c19_600x.jpg?v=1677986929');
 
 -- Produto 14: Bermuda Surf Estampada
-INSERT INTO tb_foto_produto (cod_produto, url) VALUES (14, 'https://example.com/imagens/bermuda_surf_estampada.jpg');
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (14, 'https://osklenbr.vteximg.com.br/arquivos/ids/582584/6837148828_BERMUDA-SURF-WAIKIKI_1.jpg?v=638684018951300000?w=681');
 
 -- Produto 15: Bermuda Ciclista
-INSERT INTO tb_foto_produto (cod_produto, url) VALUES (15, 'https://example.com/imagens/bermuda_ciclista.jpg');
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (15, 'https://http2.mlstatic.com/D_NQ_NP_2X_927133-MLB50610093789_072022-F-02-bermudas-ciclismo-bike-acolchoadas-profissional-promoco.webp');
 
 -- Produto 16: Bermuda Cargo Masculina
-INSERT INTO tb_foto_produto (cod_produto, url) VALUES (16, 'https://example.com/imagens/bermuda_cargo_masculina.jpg');
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (16, 'https://montevie.com/cdn/shop/files/Se612dab0d405464e980500d5fe940477S_800x.webp?v=1725980789');
 
 -- Produto 17: Bermuda Infantil Super-Heróis
-INSERT INTO tb_foto_produto (cod_produto, url) VALUES (17, 'https://example.com/imagens/bermuda_infantil_super_herois.jpg');
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (17, 'https://grupokyly.vteximg.com.br/arquivos/ids/259643-1000-1000/1000363_3449_B.jpg?v=638700442640630000');
 
 -- Produto 18: Bermuda Fitness DryFit
-INSERT INTO tb_foto_produto (cod_produto, url) VALUES (18, 'https://example.com/imagens/bermuda_fitness_dryfit.jpg');
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (18, 'https://www.gsuplementos.com.br/upload/produto/imagem/shorts-de-treino-growth-growth-supplements-1.webp');
 
 -- Fotos dos produtos Moletons
 -- Produto 28: Moletom Capuz Básico
-INSERT INTO tb_foto_produto (cod_produto, url) VALUES (28, 'https://example.com/imagens/moletom_capuz_basico.jpg');
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (28, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiCJ8FDMTrgVuU0MCgiGVYQRRcr4OldWrWGA&s');
 
 -- Produto 29: Moletom Estampado Urbano
-INSERT INTO tb_foto_produto (cod_produto, url) VALUES (29, 'https://example.com/imagens/moletom_estampado_urbano.jpg');
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (29, 'https://www.calitta.com/8336-large_default/moletom-masculino-com-capuz-moda-swag-urbano-estampa-nas-mangas.jpg');
 
 -- Produto 30: Moletom Zíper Unissex
-INSERT INTO tb_foto_produto (cod_produto, url) VALUES (30, 'https://example.com/imagens/moletom_zipe_unissex.jpg');
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (30, 'https://down-br.img.susercontent.com/file/br-11134207-7r98o-lqml29k1vmsf54');
 
 -- Produto 31: Moletom Infantil Heróis
-INSERT INTO tb_foto_produto (cod_produto, url) VALUES (31, 'https://example.com/imagens/moletom_infantil_herois.jpg');
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (31, 'https://images2.marisa.com.br/medias/sys_master/images/images/h7f/h32/16596741652510/CONJ-MOL-CAPUZ-SPIDEY-MESCLA-MESC-2-10057345314-C1.jpg');
 
 -- Produto 32: Moletom Flanelado
-INSERT INTO tb_foto_produto (cod_produto, url) VALUES (32, 'https://example.com/imagens/moletom_flanelado.jpg');
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (32, 'https://m.media-amazon.com/images/I/61acfoZWEoL._AC_SX569_.jpg');
 
 -- Produto 33: Moletom Canguru Estilizado
-INSERT INTO tb_foto_produto (cod_produto, url) VALUES (33, 'https://example.com/imagens/moletom_canguru_estilizado.jpg');
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (33, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx-Eqcg-SjCwKiDbM1l5ipO1M4az_XzdMc6g&s');
 
 -- Produto 34: Moletom College Style
-INSERT INTO tb_foto_produto (cod_produto, url) VALUES (34, 'https://example.com/imagens/moletom_college_style.jpg');
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (34, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFrUfmBfwCrbFzXl9dYNoYK5z7FqPS2q-7zA&s');
 
 -- Produto 35: Moletom Sem Capuz Slim
-INSERT INTO tb_foto_produto (cod_produto, url) VALUES (35, 'https://example.com/imagens/moletom_sem_capuz_slim.jpg');
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (35, 'https://santogato.com/161-large_default/jaqueta-social-de-moletom-masculino-slim-sem-capuz-estilo-elegante.jpg');
 
 -- Produto 36: Moletom Gamer
-INSERT INTO tb_foto_produto (cod_produto, url) VALUES (36, 'https://example.com/imagens/moletom_sem_capuz_slim.jpg');
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (36, 'https://bemvestir.cdn.magazord.com.br/img/2023/03/produto/9551/16-0597-01.jpg?ims=fit-in/630x945/filters:fill(white)');
 
 -- Fotos dos produtos Moletons, só mostrar todos os produtos 
 SELECT * FROM tb_produto;
+
+select * FROM tb_usuario;

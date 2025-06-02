@@ -1,15 +1,29 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<link rel="stylesheet" href="/static/css/header.css">
+
 <header class="main-header">
   <div class="header-left">
-    <div class="logo">LOGO</div>
+
+    <div class="logo">
+      <span class="gpt">GPT</span><span class="rio">rio</span>
+    </div>
+
   </div>
   <div class="header-right">
-    <span class="material-icons">shopping_cart</span>
 
-    {% if nome %}
+    <div class="icons">
+
+      <span class="material-icons">shopping_cart</span>
+
+      {% if nome %}
       <span>Olá, {{ nome }}</span>
       <a href="/logout"><span class="material-icons">logout</span></a>
-    {% else %}
+      {% else %}
       <a href="/login"><span class="material-icons">account_circle</span></a>
-    {% endif %}
+      {% endif %}
+      
+    </div>
+   
   </div>
 </header>

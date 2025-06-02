@@ -12,7 +12,7 @@
     padding-left: 38px;
     width: 100%;
     height: 100px;
-    background: linear-gradient(to right, #31017C, #5A30B5, #7A5FCF);
+    background: var(--header-footer);
 }
 
 .footer__container{
@@ -22,14 +22,14 @@
 
 .footer__info{
     display: flex;
-    color: white;
-    text-shadow: 2px 2px black;
+    color: var(--branco);
+    text-shadow: 2px 2px var(--preto);
 }
 
 .wpp-icon, .inst-icon, .face-icon{
     width: 40px;
     height: 40px;
-    color: white;
+    color: var(--branco);
 }
 
 .icons{

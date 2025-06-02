@@ -1,6 +1,17 @@
 :root {
-  --cor-primaria: #6a0dad;
-  --cor-secundaria: #f8f9fa;
+  --cor-gradient-1: #7A5FCF;
+  --cor-gradient-2: #5A30B5;
+  --cor-gradient-3: #31017C; 
+  --header-footer: linear-gradient(to right, #31017C, #5A30B5, #7A5FCF);
   --cor-texto: #333;
   --fonte-principal: 'Poppins', sans-serif;
+  --cor-botoes: #B2A5F0;
+  --input-cadastro: #D9D9D9;
+  --cor-de-fundo: #f9f9f9;
+  --borda-formulario: #a49cc9;
+  --hover-botoes: #d9cef7;
+  --sombra: rgba(0,0,0,0.1);
+  --cor-logo-GPT: #D1A1FF;
+  --preto: black;
+  --branco: white;
 }

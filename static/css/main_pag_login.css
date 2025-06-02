@@ -1,4 +1,4 @@
-main{
+.cadastro{
     margin-top: 10px;
 }
 
@@ -20,10 +20,13 @@ footer {
     background-color: #f8f9fa;
     padding: 1rem;
     text-align: center;
+    margin-bottom: 0px;
 }
 
 .formulario{
     margin-top: 200px;
+    width:70%;
+    margin-left: 280px;
 }
 
 

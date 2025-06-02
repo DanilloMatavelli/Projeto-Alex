@@ -5,14 +5,14 @@ app = Flask(__name__)
 app.secret_key = 'chave_super_secreta'  # Necessário para usar sessão
 
 
-# 🔸 Página principal
+# Página principal
 @app.route('/')
 def principal():
     nome = session.get('nome')
     return render_template('pagina_principal.html', nome=nome)
 
 
-# 🔸 Login
+# Login
 @app.route('/login', methods=['GET', 'POST'])
 def pagina_login():
     if request.method == 'POST':
@@ -31,7 +31,7 @@ def pagina_login():
     return render_template('pagina_login.html')
 
 
-# 🔸 Cadastro
+# Cadastro
 @app.route('/cadastro', methods=['POST'])
 def pagina_cadastro():
     nome = request.form['nome']
@@ -45,7 +45,7 @@ def pagina_cadastro():
     return redirect(url_for('pagina_login'))
 
 
-# 🔸 Logout
+# Logout
 @app.route('/logout')
 def logout():
     session.clear()

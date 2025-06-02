@@ -8,6 +8,17 @@ CREATE TABLE tb_categoria (
     descricao VARCHAR(100) NOT NULL
 );
 
+INSERT INTO tb_categoria (descricao) VALUES ('Calçados');
+
+INSERT INTO tb_categoria (descricao) VALUES ('Camisas');
+
+INSERT INTO tb_categoria (descricao) VALUES ('Bermudas');
+
+INSERT INTO tb_categoria (descricao) VALUES ('Moletons');
+
+INSERT INTO tb_categoria (descricao) VALUES ('Todos');
+
+
 -- Tabela de Produtos
 CREATE TABLE tb_produto (
     cod_produto INT PRIMARY KEY AUTO_INCREMENT,

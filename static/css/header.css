@@ -32,16 +32,15 @@
 
 .icons{
     display: flex;
-    padding-right: 78px;
-    gap: 30px;
+    padding-right: 40px;
+    gap: 50px;
+    color: var(--branco);
 }
 
 .material-icons{
     font-size: 50px !important;
-
+    color: var(--branco);
 }
-
-
 
 a{
     color: var(--preto);

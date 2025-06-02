@@ -118,3 +118,112 @@ CREATE TABLE tb_foto_produto (
     url VARCHAR(255) NOT NULL,
     FOREIGN KEY (cod_produto) REFERENCES tb_produto(cod_produto)
 );
+select * from tb_categoria;
+select * from tb_produto;
+
+-- Fotos dos produtos calçados
+-- Produto 1: Tênis Corrida X1
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (1, 'https://example.com/imagens/tenis_corrida_x1.jpg');
+-- Produto 2: Chinelo Conforto Max
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (1, 'https://example.com/imagens/chinelo_conforto_max.jpg');
+-- Produto 3: Bota Adventure Pro
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (3, 'https://example.com/imagens/bota_adventure_pro.jpg');
+-- Produto 4: Sapato Social Clássico
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (4, 'https://example.com/imagens/sapato_social_classico.jpg');
+-- Produto 5: Tênis Casual Urbano
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (5, 'https://example.com/imagens/tenis_casual_urbano.jpg');
+-- Produto 6: Sapatênis Versátil
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (6, 'https://example.com/imagens/sapatenis_versatil.jpg');
+-- Produto 7: Sandália Masculina Couro
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (7, 'https://example.com/imagens/sandalia_masculina_couro.jpg');
+-- Produto 8: Chuteira Society
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (8, 'https://example.com/imagens/chuteira_society.jpg');
+-- Produto 9: Tênis Infantil Light
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (9, 'https://example.com/imagens/tenis_infantil_light.jpg');
+
+-- Fotos dos produtos camisas
+-- Produto 19: Camisa Polo Clássica
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (19, 'https://example.com/imagens/camisa_polo_classica.jpg');
+
+-- Produto 20: Camisa Social Slim
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (20, 'https://example.com/imagens/camisa_social_slim.jpg');
+
+-- Produto 21: Camisa Xadrez Masculina
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (21, 'https://example.com/imagens/camisa_xadrez_masculina.jpg');
+
+-- Produto 22: Camisa Manga Longa Linho
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (22, 'https://example.com/imagens/camisa_manga_longa_linho.jpg');
+
+-- Produto 23: Camisa Estampada Tropical
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (23, 'https://example.com/imagens/camisa_estampada_tropical.jpg');
+
+-- Produto 24: Camisa Jeans Masculina
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (24, 'https://example.com/imagens/camisa_jeans_masculina.jpg');
+
+-- Produto 25: Camisa Básica Algodão
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (25, 'https://example.com/imagens/camisa_basica_algodao.jpg');
+
+-- Produto 26: Camisa Oversized Unissex
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (26, 'https://example.com/imagens/camisa_oversized_unissex.jpg');
+
+-- Produto 27: Camisa Esportiva Dry
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (27, 'https://example.com/imagens/camisa_esportiva_dry.jpg');
+
+-- Fotos dos produtos Bermudas
+-- Produto 10: Bermuda Jeans Tradicional
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (10, 'https://example.com/imagens/bermuda_jeans_tradicional.jpg');
+
+-- Produto 11: Bermuda Moletom Basic
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (11, 'https://example.com/imagens/bermuda_moletom_basic.jpg');
+
+-- Produto 12: Bermuda Sarja Slim
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (12, 'https://example.com/imagens/bermuda_sarja_slim.jpg');
+
+-- Produto 13: Bermuda Tática Militar
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (13, 'https://example.com/imagens/bermuda_tatica_militar.jpg');
+
+-- Produto 14: Bermuda Surf Estampada
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (14, 'https://example.com/imagens/bermuda_surf_estampada.jpg');
+
+-- Produto 15: Bermuda Ciclista
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (15, 'https://example.com/imagens/bermuda_ciclista.jpg');
+
+-- Produto 16: Bermuda Cargo Masculina
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (16, 'https://example.com/imagens/bermuda_cargo_masculina.jpg');
+
+-- Produto 17: Bermuda Infantil Super-Heróis
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (17, 'https://example.com/imagens/bermuda_infantil_super_herois.jpg');
+
+-- Produto 18: Bermuda Fitness DryFit
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (18, 'https://example.com/imagens/bermuda_fitness_dryfit.jpg');
+
+-- Fotos dos produtos Moletons
+-- Produto 28: Moletom Capuz Básico
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (28, 'https://example.com/imagens/moletom_capuz_basico.jpg');
+
+-- Produto 29: Moletom Estampado Urbano
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (29, 'https://example.com/imagens/moletom_estampado_urbano.jpg');
+
+-- Produto 30: Moletom Zíper Unissex
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (30, 'https://example.com/imagens/moletom_zipe_unissex.jpg');
+
+-- Produto 31: Moletom Infantil Heróis
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (31, 'https://example.com/imagens/moletom_infantil_herois.jpg');
+
+-- Produto 32: Moletom Flanelado
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (32, 'https://example.com/imagens/moletom_flanelado.jpg');
+
+-- Produto 33: Moletom Canguru Estilizado
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (33, 'https://example.com/imagens/moletom_canguru_estilizado.jpg');
+
+-- Produto 34: Moletom College Style
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (34, 'https://example.com/imagens/moletom_college_style.jpg');
+
+-- Produto 35: Moletom Sem Capuz Slim
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (35, 'https://example.com/imagens/moletom_sem_capuz_slim.jpg');
+
+-- Produto 36: Moletom Gamer
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (36, 'https://example.com/imagens/moletom_sem_capuz_slim.jpg');
+
+-- Fotos dos produtos Moletons, só mostrar todos os produtos 
+SELECT * FROM tb_produto;

@@ -20,6 +20,7 @@
 }
 
 
+
 .header-right{
     width: 50%;
     height: auto;
@@ -29,19 +30,18 @@
 }
 
 
-
-.material-icons{
-    font-size: 40px;
-
-}
-
 .icons{
     display: flex;
-   
-   
     padding-right: 78px;
     gap: 30px;
 }
+
+.material-icons{
+    font-size: 50px !important;
+
+}
+
+
 
 a{
     color: var(--preto);
@@ -50,9 +50,12 @@ a{
 .gpt{
     color: var(--cor-logo-GPT);
     text-shadow: 2px 2px var(--preto);
+    font-size: 40px;
 }
 
 .rio{
     color: var(--branco);
     text-shadow: 2px 2px var(--preto);
+    font-size: 35px;
 }
+

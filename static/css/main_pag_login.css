@@ -11,3 +11,24 @@
   padding: 1rem 2rem;
   color: var(--branco);
 }
+
+.btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--preto);
+  border: 2px solid var(--preto);
+  width: 558px;
+  height: 60px;
+  background-color: var(--cor-botoes);
+}
+
+.formulario__input{
+  width: 558px;
+  height: 60px;
+  font-size: 20px;
+}
+
+.formulario__title{
+  font-size: 30px;
+}

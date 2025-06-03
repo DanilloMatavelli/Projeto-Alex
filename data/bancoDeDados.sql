@@ -118,8 +118,6 @@ CREATE TABLE tb_foto_produto (
     url VARCHAR(255) NOT NULL,
     FOREIGN KEY (cod_produto) REFERENCES tb_produto(cod_produto)
 );
-select * from tb_categoria;
-select * from tb_produto;
 
 -- Fotos dos produtos calçados
 -- Produto 1: Tênis Corrida X1

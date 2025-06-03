@@ -30,10 +30,31 @@
   <main class="main-content">
 
     <section class="carrossel">
-      <div class="carrossel__container">
-        <h1 class="carrossel__titulo">Carrossel</h1>
+ <div id="carouselExampleIndicators" class="carrossel__container carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    {% for i in range(imagens|length) %}
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ i }}" {% if i == 0 %}class="active"{% endif %} aria-current="true" aria-label="Slide {{ i + 1 }}"></button>
+    {% endfor %}
+  </div>
+  <div class="carousel-inner">
+    {% for img_url in imagens %}
+      <div class="carousel-item {% if loop.index0 == 0 %}active{% endif %}">
+        <img src="{{ img_url }}" class="d-block w-100" alt="Slide {{ loop.index }}">
       </div>
-    </section>
+    {% endfor %}
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Próximo</span>
+  </button>
+</div>
+
+</section>
+
 
     <section class="categorias">
       <div class="categorias__container">

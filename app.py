@@ -5,11 +5,15 @@ app = Flask(__name__)
 app.secret_key = 'chave_super_secreta' 
 
 
-# Página principal
+from model.controller_imagem import obter_imagens
+
 @app.route('/')
 def principal():
     nome = session.get('nome')
-    return render_template('pagina_principal.html', nome=nome)
+    imagens = obter_imagens()
+    return render_template('pagina_principal.html', nome=nome, imagens=imagens)
+
+
 
 
 # Login

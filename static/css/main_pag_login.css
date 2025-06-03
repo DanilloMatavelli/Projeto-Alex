@@ -1,4 +1,6 @@
-
+*{
+    font-family: "Nunito", sans-serif;
+}
 
 .header {
   background-color: var(--cor-gradient-1);

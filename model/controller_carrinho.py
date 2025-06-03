@@ -10,12 +10,12 @@ class Carrinho:
         cursor = conexao.cursor(dictionary = True)
         
         # Define a consulta SQL
-        sql = """SELECT cod_comentario,
-                        nome as usuario, 
+        sql = """SELECT cod_produto,
+                        nome, 
                         data_hora,
                         curtidas,
                         comentario as mensagem
-                 FROM tb_comentarios"""
+                 FROM tb_produto"""
                  
         # Executando o comando SQL
         cursor.execute(sql)

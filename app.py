@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for, session
 from model.controller_usuario import autenticar_usuario, cadastrar_usuario
 
 app = Flask(__name__)
-app.secret_key = 'chave_super_secreta'  # Necessário para usar sessão
+app.secret_key = 'chave_super_secreta' 
 
 
 # Página principal

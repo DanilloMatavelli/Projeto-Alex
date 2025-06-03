@@ -1,3 +1,7 @@
+*{
+    font-family: "Nunito", sans-serif;
+}
+
 /* Estilização dos filtros */
 .loja__filtros {
   display: flex;

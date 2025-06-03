@@ -4,11 +4,20 @@
 
 <link rel="stylesheet" href="/static/css/header.css">
 
+<link rel="stylesheet" href="/static/css/reset.css">
+
+
+<!-- Nunito Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
 <header class="main-header">
   <div class="header-left">
 
     <div class="logo">
-      <span class="gpt">GPT</span><span class="rio">rio</span>
+      <a href="/"><span class="gpt">GPT</span><span class="rio">rio</span></a>
+      
     </div>
 
   </div>
@@ -16,7 +25,9 @@
 
     <div class="icons">
 
-      <span class="material-icons">shopping_cart</span>
+
+      <a href="/carrinho"><span class="material-icons">shopping_cart</span></a>
+      
       {% if nome %}
       <span>Olá, {{ nome }}</span>
       <a href="/logout"><span class="material-icons">logout</span></a>

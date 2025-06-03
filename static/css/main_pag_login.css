@@ -23,8 +23,14 @@
   background-color: var(--cor-botoes);
 }
 
+.btn:hover{
+  background-color: var(--hover-botoes);
+  color: var(--preto);
+  border: 2px solid var(--preto);
+}
+
 .formulario__input{
-  width: 558px;
+  width: 536px;
   height: 60px;
   font-size: 20px;
 }

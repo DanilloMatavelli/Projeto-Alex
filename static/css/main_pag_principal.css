@@ -53,7 +53,7 @@ body {
 }
 
 .btn-outline-primary{
-  background-color: var(--cor-botoes-categoria);
+  background-color: var(--cor-botoes);
 }
 
 .btn-outline-secondary{

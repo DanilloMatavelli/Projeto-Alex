@@ -42,6 +42,73 @@ body {
   padding: 0.5rem 1rem;
 }
 
+.btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--preto);
+  border: 2px solid var(--preto);
+  width: 240px;
+  height: 50px;
+}
+
+.btn-outline-primary{
+  background-color: var(--cor-botoes);
+}
+
+.btn-outline-secondary{
+  background-color: var(--cor-botao-todos);
+  font-weight: 1000;
+}
+
+.btn-outline-primary:hover{
+  background-color: var(--hover-botoes);
+  color: var(--preto); 
+  border: 2px solid var(--preto); 
+  
+}
+
+.btn-outline-primary:focus,
+.btn-outline-primary:active,
+.btn-outline-primary:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: var(--cor-botoes) !important;
+  color: var(--preto) !important;
+  border: 2px solid var(--preto) !important;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--hover-botoes) !important;
+  color: var(--preto) !important;
+  border: 2px solid var(--preto) !important;
+}
+
+/* Botão "Todos" (cinza) */
+.btn-outline-secondary {
+  background-color: var(--cor-botao-todos);
+  font-weight: 1000;
+  color: var(--preto);
+  border: 2px solid var(--preto);
+}
+
+.btn-outline-secondary:focus,
+.btn-outline-secondary:active,
+.btn-outline-secondary:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: var(--cor-botao-todos) !important;
+  color: var(--preto) !important;
+  border: 2px solid var(--preto) !important;
+}
+
+.btn-outline-secondary:hover { 
+  color: var(--branco) !important;
+  border: 2px solid var(--preto) !important;
+}
+
+
+
 @media (max-width: 768px) {
   .header__container,
   .footer__container {

@@ -51,6 +51,11 @@ def logout():
     session.clear()
     return redirect(url_for('principal'))
 
+# Rota Carrinho
+@app.route('/carrinho')
+def pagina_carrinho():
+    return render_template('pagina_carrinho.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -28,7 +28,8 @@
                     <div class="col-lg-8 mb-4">
                         <h3 class="mb-4 fw-bold">Meu carrinho</h3>
 
-                        <div class="card border-0 bg-primary bg-opacity-25 rounded-4 p-3 position-relative">
+                        {% for item in produtos %}
+                        <div class="card border-0 bg-primary bg-opacity-25 rounded-4 p-3 position-relative mb-3">
                             <button class="btn btn-link position-absolute top-0 end-0 mt-2 me-2 text-dark">
                                 <i class="fas fa-trash fs-5"></i>
                             </button>
@@ -36,23 +37,23 @@
                             <div class="row align-items-center">
                                 <div class="col-auto">
                                     <div class="bg-white rounded-2 p-3 border" style="width: 80px; height: 80px;">
-                                        <div class="d-flex align-items-center justify-content-center h-100">
-                                            <i class="fas fa-running fs-2 text-dark"></i>
-                                        </div>
+                                        <img src="{{ item.foto }}" alt="{{ item.nome }}" class="img-fluid rounded">
                                     </div>
                                 </div>
                                 <div class="col">
-                                    <h5 class="mb-1 fw-bold">Tênis Nike Revolution 7 Feminino</h5>
-                                    <p class="mb-0 text-muted">Corrida</p>
+                                    <h5 class="mb-1 fw-bold">{{ item.nome }}</h5>
+                                    <p class="mb-0 text-muted">{{ item.categoria }}</p>
+                                    <p class="mb-0 text-muted">Quantidade: {{ item.quantidade }}</p>
                                 </div>
                             </div>
 
                             <hr class="my-3 border-secondary">
 
                             <div class="text-center">
-                                <h2 class="fw-bold text-dark">R$ 309,99</h2>
+                                <h2 class="fw-bold text-dark">R$ {{ item.preco }}</h2>
                             </div>
                         </div>
+                        {% endfor %}
                     </div>
 
                     <!-- Resumo da Compra -->
@@ -61,7 +62,7 @@
 
                         <div class="card border-2 rounded-4 p-3">
                             <div class="mb-4">
-                                <strong class="fs-6">Valor Total: R$ 523,90</strong>
+                                <strong class="fs-6">Valor Total: R$ {{ total }}</strong>
                             </div>
 
                             <button class="btn btn-primary bg-opacity-50 border-0 w-100 mb-2 fw-semibold text-dark">

@@ -56,6 +56,19 @@ def logout():
 def pagina_carrinho():
     return render_template('pagina_carrinho.html')
 
+# Rota Carrinho
+@app.route('/comando/carrinho')
+def comando_carrinho():
+    cod_usuario = session.get('cod_usuario')
+
+    if not cod_usuario:
+        return redirect(url_for('pagina_login'))
+
+    from model.controller_carrinho import Carrinho
+    produtos = Carrinho.recuperar_produtos_do_carrinho(cod_usuario)
+
+    return render_template('pagina_carrinho.html', produtos=produtos)
+
 
 if __name__ == '__main__':
     app.run(debug=True)

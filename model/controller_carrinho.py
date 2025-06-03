@@ -1,0 +1,21 @@
+from data.conexao import conectar
+
+
+class Carrinho:
+    def recuperar_informacoes_produto():
+        # Criar conexão
+        conexao = conectar.criar_conexao()
+        
+        # O cursor será responsavel por manipular o banco de dados 
+        cursor = conexao.cursor(dictionary = True)
+        
+        # Define a consulta SQL
+        sql = """SELECT cod_comentario,
+                        nome as usuario, 
+                        data_hora,
+                        curtidas,
+                        comentario as mensagem
+                 FROM tb_comentarios"""
+                 
+        # Executando o comando SQL
+        cursor.execute(sql)

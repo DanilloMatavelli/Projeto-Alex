@@ -31,3 +31,45 @@ main {
   align-items: center;
   line-height: 1;
 }
+
+.rounded-4{
+  width: 700px;
+  height: auto;
+  
+
+}
+
+.card{
+  width: 600px;
+
+}
+
+.container{
+  display: flex;
+  gap: 60px;
+  
+}
+
+
+.btn-primary {
+  background-color: var(--cor-botoes) !important;
+  border: 2px solid var(--preto) !important;
+  color: var(--preto) !important;
+  box-shadow: none !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--hover-botoes) !important; /* se quiser efeito ao passar o mouse */
+  color: var(--preto) !important;
+}
+
+.card .btn-primary { /* ou o que envolva os botões no resumo */
+  border: 2px solid var(--preto) !important;
+}
+
+.carrinho-card {
+  background-color: var(--cor-botoes) !important;
+  border: 2px solid var(--preto) !important;
+  color: var(--preto);
+}
+

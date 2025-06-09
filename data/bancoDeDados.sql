@@ -488,3 +488,14 @@ VALUES (36,
 'https://bemvestir.cdn.magazord.com.br/img/2023/03/produto/9551/16-0597-01.jpg?ims=fit-in/630x945/filters:fill(white)', 
 'https://images.unsplash.com/photo-1607522370275-f14206abe5d3?w=400', 
 'https://images.unsplash.com/photo-1560769629-d641e25e4a5e?w=400');
+
+CREATE TABLE tb_comentario (
+    cod_comentario INT PRIMARY KEY AUTO_INCREMENT,
+    cod_produto INT NOT NULL,
+    cod_usuario INT NOT NULL,
+    texto_comentario TEXT NOT NULL,
+    avaliacao INT CHECK (avaliacao BETWEEN 1 AND 5),
+    data_comentario DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (cod_produto) REFERENCES tb_produto(cod_produto),
+    FOREIGN KEY (cod_usuario) REFERENCES tb_usuario(cod_usuario)
+);

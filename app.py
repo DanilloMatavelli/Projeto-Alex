@@ -62,7 +62,7 @@ def logout():
 def ver_carrinho():
     cod_usuario = session.get("cod_usuario")
     if not cod_usuario:
-        return redirect(url_for("login"))
+        return redirect(url_for('pagina_login'))
 
     # Listando os itens do carrinho
     itens = listar_itens_carrinho(cod_usuario)
@@ -87,7 +87,7 @@ def rota_adicionar_carrinho():
     cod_produto = request.form["cod_produto"]
 
     if cod_usuario is None:
-        return redirect(url_for("login"))
+        return redirect(url_for('pagina_login'))
 
     adicionar_ao_carrinho(cod_usuario, cod_produto)
     return redirect(url_for("ver_carrinho"))  # Redireciona para a página do carrinho

@@ -3,6 +3,7 @@ from model.controller_usuario import autenticar_usuario, cadastrar_usuario
 from model.controller_imagem import obter_imagens
 from model.controller_produto import obter_produtos_por_categoria
 
+
 app = Flask(__name__)
 app.secret_key = 'chave_super_secreta'
 
@@ -58,6 +59,13 @@ def logout():
 @app.route('/carrinho')
 def pagina_carrinho():
     return render_template('pagina_carrinho.html')
+
+# Rota produto detalhado
+
+@app.route('/produto_detalhado/<int:cod_produto>')
+def produto_detalhado(cod_produto):
+    produto = obter_produto_detalhado(cod_produto)
+    return render_template('pagina_detalhado.html', produto=produto)
 
 if __name__ == '__main__':
     app.run(debug=True)

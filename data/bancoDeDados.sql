@@ -8,15 +8,15 @@ CREATE TABLE tb_categoria (
     descricao VARCHAR(100) NOT NULL
 );
 
-INSERT INTO tb_categoria (descricao) VALUES ('Calçados');
+select * from tb_categoria;
 
-INSERT INTO tb_categoria (descricao) VALUES ('Camisas');
+INSERT INTO tb_categoria (descricao) VALUES ('Calçados');
 
 INSERT INTO tb_categoria (descricao) VALUES ('Bermudas');
 
-INSERT INTO tb_categoria (descricao) VALUES ('Moletons');
+INSERT INTO tb_categoria (descricao) VALUES ('Camisas');
 
-INSERT INTO tb_categoria (descricao) VALUES ('Todos');
+INSERT INTO tb_categoria (descricao) VALUES ('Moletons');
 
 
 -- Tabela de Produtos
@@ -43,27 +43,27 @@ INSERT INTO tb_produto (nome, descricao, preco, cod_categoria) VALUES
 
 -- Produtos da categoria Camisas 
 INSERT INTO tb_produto (nome, descricao, preco, cod_categoria) VALUES
-('Camisa Polo Clássica', 'Polo lisa em diversas cores.', 109.90, 2),
-('Camisa Social Slim', 'Corte moderno e elegante.', 129.00, 2),
-('Camisa Xadrez Masculina', 'Estilo casual com estampa xadrez.', 99.99, 2),
-('Camisa Manga Longa Linho', 'Ideal para climas quentes.', 149.90, 2),
-('Camisa Estampada Tropical', 'Estampa descontraída para o verão.', 89.90, 2),
-('Camisa Jeans Masculina', 'Estilo urbano em jeans.', 119.00, 2),
-('Camisa Básica Algodão', 'Modelo simples e confortável.', 59.90, 2),
-('Camisa Oversized Unissex', 'Corte amplo e moderno.', 74.50, 2),
-('Camisa Esportiva Dry', 'Tecido respirável para esportes.', 69.90, 2);
+('Camisa Polo Clássica', 'Polo lisa em diversas cores.', 109.90, 3),
+('Camisa Social Slim', 'Corte moderno e elegante.', 129.00, 3),
+('Camisa Xadrez Masculina', 'Estilo casual com estampa xadrez.', 99.99, 3),
+('Camisa Manga Longa Linho', 'Ideal para climas quentes.', 149.90, 3),
+('Camisa Estampada Tropical', 'Estampa descontraída para o verão.', 89.90, 3),
+('Camisa Jeans Masculina', 'Estilo urbano em jeans.', 119.00, 3),
+('Camisa Básica Algodão', 'Modelo simples e confortável.', 59.90, 3),
+('Camisa Oversized Unissex', 'Corte amplo e moderno.', 74.50, 3),
+('Camisa Esportiva Dry', 'Tecido respirável para esportes.', 69.90, 3);
 
 -- Produtos da categoria Bermudas
 INSERT INTO tb_produto (nome, descricao, preco, cod_categoria) VALUES
-('Bermuda Jeans Tradicional', 'Jeans azul com corte reto.', 89.90, 3),
-('Bermuda Moletom Basic', 'Modelo casual em moletom leve.', 59.90, 3),
-('Bermuda Sarja Slim', 'Bermuda de sarja com elastano.', 79.99, 3),
-('Bermuda Tática Militar', 'Modelo com bolsos múltiplos e tecido reforçado.', 129.90, 3),
-('Bermuda Surf Estampada', 'Ideal para praia ou piscina.', 69.90, 3),
-('Bermuda Ciclista', 'Modelo justo e confortável para pedalar.', 59.50, 3),
-('Bermuda Cargo Masculina', 'Com bolsos laterais e tecido resistente.', 99.90, 3),
-('Bermuda Infantil Super-Heróis', 'Estampa divertida para crianças.', 49.90, 3),
-('Bermuda Fitness DryFit', 'Tecido respirável para atividades físicas.', 64.99, 3); 
+('Bermuda Jeans Tradicional', 'Jeans azul com corte reto.', 89.90, 2),
+('Bermuda Moletom Basic', 'Modelo casual em moletom leve.', 59.90, 2),
+('Bermuda Sarja Slim', 'Bermuda de sarja com elastano.', 79.99, 2),
+('Bermuda Tática Militar', 'Modelo com bolsos múltiplos e tecido reforçado.', 129.90, 2),
+('Bermuda Surf Estampada', 'Ideal para praia ou piscina.', 69.90, 2),
+('Bermuda Ciclista', 'Modelo justo e confortável para pedalar.', 59.50, 2),
+('Bermuda Cargo Masculina', 'Com bolsos laterais e tecido resistente.', 99.90, 2),
+('Bermuda Infantil Super-Heróis', 'Estampa divertida para crianças.', 49.90, 2),
+('Bermuda Fitness DryFit', 'Tecido respirável para atividades físicas.', 64.99, 2); 
 
 -- Produtos da categoria Moletons
 INSERT INTO tb_produto (nome, descricao, preco, cod_categoria) VALUES
@@ -77,11 +77,6 @@ INSERT INTO tb_produto (nome, descricao, preco, cod_categoria) VALUES
 ('Moletom Sem Capuz Slim', 'Corte ajustado, discreto e leve.', 119.00, 4),
 ('Moletom Gamer', 'Com estampa de jogos e cultura geek.', 134.90, 4);
 
--- Produtos da categoria todos
-INSERT INTO tb_produto (nome, descricao, preco, cod_categoria)
-SELECT nome, descricao, preco, 5
-FROM tb_produto
-WHERE cod_categoria IN (1, 2, 3, 4);
 
 -- Tabela de Usuários 
 CREATE TABLE tb_usuario (
@@ -121,13 +116,13 @@ CREATE TABLE tb_foto_produto (
 
 -- Fotos dos produtos calçados
 -- Produto 1: Tênis Corrida X1
-INSERT INTO tb_foto_produto (cod_produto, url) VALUES (1, 'https://cdn.vnda.com.br/1000x800/velocita/2024/11/12/14_58_04_933_14_11_1_169_1147910fstc1.jpg?v=1731434322');
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (1, 'https://cdn.vnda.com.br/1000x800/velocita/2024/11/12/14_58_04_933_14_11_1_169_1147910fstc1.jpg?v=1731434322'); 
 -- Produto 2: Chinelo Conforto Max
-INSERT INTO tb_foto_produto (cod_produto, url) VALUES (1, 'https://m.media-amazon.com/images/I/81gCNdzb8fL._AC_SY695_.jpg');
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (1, 'https://havaianas.com.br/cdn/shop/files/4148608-top-max-comfort-0090-0.jpg?v=1734128580&width=493');
 -- Produto 3: Bota Adventure Pro
-INSERT INTO tb_foto_produto (cod_produto, url) VALUES (3, 'https://a-static.mlcdn.com.br/800x560/bota-coturno-masculina-motoqueiro-adventure-pro-force-150-proforce/scaf/16239594/4ff1149e429c2d988ffe18ea7bae90a1.jpeg');
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (3, 'https://img.irroba.com.br/fit-in/500x500/filters:format(webp):fill(transparent):quality(80)/vntboeee/catalog/3101bbrown4.png');
 -- Produto 4: Sapato Social Clássico
-INSERT INTO tb_foto_produto (cod_produto, url) VALUES (4, 'https://example.com/imagens/sapato_social_classico.jpg');
+INSERT INTO tb_foto_produto (cod_produto, url) VALUES (4, 'https://img.irroba.com.br/fit-in/600x600/filters:format(webp):fill(fff):quality(80)/bernaton/catalog/produtos/3098-laser-cafe-120191008093157.JPG');
 -- Produto 5: Tênis Casual Urbano
 INSERT INTO tb_foto_produto (cod_produto, url) VALUES (5, 'https://static.zattini.com.br/produtos/sapato-masculino-democrata-oliver-social-classico-cadarco-couro-conforto-273202/06/D83-4415-006/D83-4415-006_zoom1.jpg?ts=1705309530&ims=1088x');
 -- Produto 6: Sapatênis Versátil
@@ -223,8 +218,8 @@ INSERT INTO tb_foto_produto (cod_produto, url) VALUES (35, 'https://santogato.co
 -- Produto 36: Moletom Gamer
 INSERT INTO tb_foto_produto (cod_produto, url) VALUES (36, 'https://bemvestir.cdn.magazord.com.br/img/2023/03/produto/9551/16-0597-01.jpg?ims=fit-in/630x945/filters:fill(white)');
 
--- Fotos dos produtos Moletons, só mostrar todos os produtos 
-SELECT * FROM tb_produto;
+
+
 
 CREATE TABLE tb_produto_detalhado (
     cod_produto INT,
@@ -488,3 +483,12 @@ VALUES (36,
 'https://img.ltwebstatic.com/images3_pi/2024/12/04/4e/17333043245fa2f4fdfe00c07295365bd25040e5f3_thumbnail_405x.webp', 
 'https://img.ltwebstatic.com/images3_pi/2024/07/19/b6/1721360471dc94faeb872ede800d4d4ff77803c853_thumbnail_560x.webp', 
 'https://img.ltwebstatic.com/images3_pi/2024/07/19/7f/17213604868d55fe7058b35c7731e280c10e28adf5_thumbnail_560x.webp');
+
+
+-- Fotos dos produtos Moletons, só mostrar todos os produtos 
+SELECT p.cod_produto, p.nome, p.descricao, p.preco, f.url AS imagem_principal,
+                d.url_foto1, d.url_foto2, d.url_foto3
+            FROM tb_produto p
+            LEFT JOIN tb_foto_produto f ON p.cod_produto = f.cod_produto
+            LEFT JOIN tb_produto_detalhado d ON p.cod_produto = d.cod_produto
+            WHERE p.cod_categoria = 0;

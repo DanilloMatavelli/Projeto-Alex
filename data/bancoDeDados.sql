@@ -485,11 +485,9 @@ VALUES (35,
 -- Produto 36: Moletom Gamer
 INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
 VALUES (36, 
-<<<<<<< HEAD
 'https://img.ltwebstatic.com/images3_pi/2024/12/04/4e/17333043245fa2f4fdfe00c07295365bd25040e5f3_thumbnail_405x.webp', 
 'https://img.ltwebstatic.com/images3_pi/2024/07/19/b6/1721360471dc94faeb872ede800d4d4ff77803c853_thumbnail_560x.webp', 
 'https://img.ltwebstatic.com/images3_pi/2024/07/19/7f/17213604868d55fe7058b35c7731e280c10e28adf5_thumbnail_560x.webp');
-=======
 'https://bemvestir.cdn.magazord.com.br/img/2023/03/produto/9551/16-0597-01.jpg?ims=fit-in/630x945/filters:fill(white)', 
 'https://images.unsplash.com/photo-1607522370275-f14206abe5d3?w=400', 
 'https://images.unsplash.com/photo-1560769629-d641e25e4a5e?w=400');
@@ -504,4 +502,3 @@ CREATE TABLE tb_comentario (
     FOREIGN KEY (cod_produto) REFERENCES tb_produto(cod_produto),
     FOREIGN KEY (cod_usuario) REFERENCES tb_usuario(cod_usuario)
 );
->>>>>>> 252dedc3bc6e41ade89a5b5c36161674a4007193

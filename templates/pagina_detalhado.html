@@ -40,7 +40,7 @@
         <div style="border:1px solid #ccc; padding:10px; margin:10px 0;">
             <strong>{{ comentario['nome_usuario'] }}</strong> - Avaliação: {{ comentario['avaliacao'] }} ⭐<br>
             {{ comentario['texto_comentario'] }}<br>
-            <small>{{ comentario['data_comentario'] }}</small>
+            <span>{{ comentario['data_comentario'] }}</span>
         </div>
     {% else %}
         <p>Ainda não há comentários para este produto. Seja o primeiro a comentar!</p>

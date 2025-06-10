@@ -1,19 +1,130 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
     <link rel="stylesheet" href="/static/css/reset.css">
+    <link rel="stylesheet" href="/static/css/main_pag_detalhado.css">
 
+    <!-- Link Botstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Nunito Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        .produto {
+            padding: 3rem 1rem;
+        }
+
+        .produto__imagem {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .produto__titulo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .produto__preco {
+            font-size: 1.25rem;
+            color: #555;
+            margin-bottom: 1.2rem;
+            margin-top: 5rem;
+            text-align: center;
+        }
+
+        .produto__btn {
+            background-color: #512da8;
+            color: #fff;
+            border: none;
+            margin-top: 5rem;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .produto__btn:hover {
+            background-color: #311b92;
+        }
+
+        .comentario__form {
+            margin-top: 15rem;
+        }
+
+        .avaliacoes {
+            margin-top: 3rem;
+        }
+
+        .avaliacoes__titulo {
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .avaliacao-card {
+            background-color: #f3e5f5;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .produto__titulo {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div class="container produto">
+        <div class="row g-4 align-items-start">
+            <div class="col-md-6">
+                <img src="shorts.jpg" alt="Shorts Nike" class="produto__imagem">
+
+                <div class="comentario__form">
+                    <label for="comentario" class="form-label mt-4">Adicionar comentário</label>
+                    <textarea class="form-control" id="comentario" rows="3"
+                        placeholder="Digite seu comentário aqui..."></textarea>
+                    <button class="btn produto__btn mt-2">Enviar avaliação</button>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <h1 class="produto__titulo">Shorts Nike Dri-FIT Totality Masculino</h1>
+                <p class="produto__preco">R$ 132,99</p>
+                <button class="btn produto__btn mb-4">Adicionar ao carrinho</button>
+            </div>
+        </div>
+
+        <div class="avaliacoes">
+            <h4 class="avaliacoes__titulo">Avaliações</h4>
+
+            <div class="avaliacao-card">
+                <strong>Miguel Câmara</strong>
+                <p>Excelente bermuda!</p>
+            </div>
+
+            <div class="avaliacao-card">
+                <strong>Arthur Rampazi</strong>
+                <p>Não gostei, muito curto</p>
+            </div>
+
+            <div class="avaliacao-card">
+                <strong>Miguel Luís</strong>
+                <p>Lindo shorts, porém chegou depois do prazo</p>
+            </div>
+        </div>
+    </div>
+
 </body>
-</html>

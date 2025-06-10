@@ -90,7 +90,7 @@
     <div class="container produto">
         <div class="row g-4 align-items-start">
             <div class="col-md-6">
-                <img src="shorts.jpg" alt="Shorts Nike" class="produto__imagem">
+                <img src="{{ produto.imagem_url }}" alt="{{ produto.nome }}" class="produto__imagem">
 
                 <div class="comentario__form">
                     <label for="comentario" class="form-label mt-4">Adicionar comentário</label>
@@ -101,30 +101,32 @@
             </div>
 
             <div class="col-md-6">
-                <h1 class="produto__titulo">Shorts Nike Dri-FIT Totality Masculino</h1>
-                <p class="produto__preco">R$ 132,99</p>
+                <h1 class="produto__titulo">{{ produto.nome }}</h1>
+                <p class="produto__preco">R$ {{ produto.preco }}</p>
+                <p class="produto__descricao">{{ produto.descricao }}</p>
                 <button class="btn produto__btn mb-4">Adicionar ao carrinho</button>
             </div>
         </div>
+    </div>
 
-        <div class="avaliacoes">
-            <h4 class="avaliacoes__titulo">Avaliações</h4>
+    <div class="avaliacoes">
+        <h4 class="avaliacoes__titulo">Avaliações</h4>
 
-            <div class="avaliacao-card">
-                <strong>Miguel Câmara</strong>
-                <p>Excelente bermuda!</p>
-            </div>
-
-            <div class="avaliacao-card">
-                <strong>Arthur Rampazi</strong>
-                <p>Não gostei, muito curto</p>
-            </div>
-
-            <div class="avaliacao-card">
-                <strong>Miguel Luís</strong>
-                <p>Lindo shorts, porém chegou depois do prazo</p>
-            </div>
+        <div class="avaliacao-card">
+            <strong>Miguel Câmara</strong>
+            <p>Excelente bermuda!</p>
         </div>
+
+        <div class="avaliacao-card">
+            <strong>Arthur Rampazi</strong>
+            <p>Não gostei, muito curto</p>
+        </div>
+
+        <div class="avaliacao-card">
+            <strong>Miguel Luís</strong>
+            <p>Lindo shorts, porém chegou depois do prazo</p>
+        </div>
+    </div>
     </div>
 
 </body>

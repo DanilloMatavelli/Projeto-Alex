@@ -64,3 +64,10 @@ a{
   align-items: center;
   line-height: 1;
 }
+
+.material-icons,
+.fa-facebook,
+.fa-whatsapp {
+  color: white !important;
+}
+

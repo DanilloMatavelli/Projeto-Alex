@@ -6,34 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Carrinho</title>
 
-
-
     <link rel="stylesheet" href="/static/css/reset.css">
-
 
     <!-- Nunito Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    
-
-
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    
 
     <!-- Link CSS -->
     <link rel="stylesheet" href="/static/css/main_pag_carrinho.css">
-
-
-    <!-- Link Variaveis -->
     <link rel="stylesheet" href="/static/css/variables.css">
-
-
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -47,39 +32,32 @@
                     <div class="col-lg-8 mb-4">
                         <h3 class="mb-4 fw-bold">Meu carrinho</h3>
 
-                        <div class="card carrinho-card rounded-4 p-3 position-relative">
-                            <button class="btn btn-link position-absolute top-0 end-0 mt-2 me-2 text-dark">
-                                <i class="fas fa-trash fs-5"></i>
-                            </button>
-
-                            <div class="row align-items-center">
-                                <div class="col-auto">
-                                    <div class="bg-white rounded-2 p-3 border" style="width: 80px; height: 80px;">
-                                        <div class="d-flex align-items-center justify-content-center h-100">
-                                            <i class="fas fa-running fs-2 text-dark"></i>
+                        {% if itens %}
+                            <div class="card carrinho-card rounded-4 p-3 position-relative">
+                                {% for item in itens %}
+                                <div class="row align-items-center mb-3">
+                                    <div class="col-auto">
+                                        <div class="bg-white rounded-2 p-3 border" style="width: 80px; height: 80px;">
+                                            <img src="{{ item.imagem_url }}" alt="{{ item.nome }}" class="img-fluid">
                                         </div>
                                     </div>
+                                    <div class="col">
+                                        <h5 class="mb-1 fw-bold">{{ item.nome }}</h5>
+                                        <p class="mb-0 text-muted">Categoria: {{ item.categoria }}</p>
+                                    </div>
+                                    <div class="col-auto text-center">
+                                        <h4 class="fw-bold">R$ {{ item.preco }}</h4>
+                                    </div>
                                 </div>
-                                <div class="col">
-                                    <h5 class="mb-1 fw-bold">Tênis Nike Revolution 7 Feminino</h5>
-                                    <p class="mb-0 text-muted">Corrida</p>
-                                </div>
+                                <hr class="my-3 border-secondary">
+                                {% endfor %}
                             </div>
-
-                            <hr class="my-3 border-secondary">
-
-                            <div class="text-center">
-                                <h2 class="fw-bold text-dark">R$ 309,99</h2>
-                            </div>
-                        </div>
+                        {% else %}
+                            <p>Seu carrinho está vazio.</p>
+                        {% endif %}
                     </div>
-
                     
-                </div>
-
-                
-            </div>
-            <!-- Resumo da Compra -->
+                    <!-- Resumo da Compra -->
                     <div class="col-lg-4">
                         <h3 class="mb-4 fw-bold">Resumo da compra</h3>
 
@@ -97,14 +75,14 @@
                             </button>
                         </div>
                     </div>
+                </div>
+            </div>
         </div>
-
     </main>
 
     {% include 'footer.html' %}
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-
 </body>
 
 </html>

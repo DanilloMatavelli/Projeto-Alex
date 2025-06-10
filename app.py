@@ -1,11 +1,10 @@
 from flask import Flask, render_template, request, redirect, url_for, session
 from model.controller_usuario import autenticar_usuario, cadastrar_usuario
+from model.controller_imagem import obter_imagens
+from model.controller_produto import obter_produtos_por_categoria
 
 app = Flask(__name__)
-app.secret_key = 'chave_super_secreta' 
-
-
-from model.controller_imagem import obter_imagens
+app.secret_key = 'chave_super_secreta'
 
 @app.route('/')
 def principal():
@@ -13,8 +12,10 @@ def principal():
     imagens = obter_imagens()
     return render_template('pagina_principal.html', nome=nome, imagens=imagens)
 
-
-
+@app.route('/produtos/<int:cod_categoria>')
+def produtos(cod_categoria):
+    produtos = obter_produtos_por_categoria(cod_categoria)
+    return render_template('pagina_produto.html', produtos=produtos, cod_categoria=cod_categoria)
 
 # Login
 @app.route('/login', methods=['GET', 'POST'])
@@ -34,7 +35,6 @@ def pagina_login():
 
     return render_template('pagina_login.html')
 
-
 # Cadastro
 @app.route('/cadastro', methods=['POST'])
 def pagina_cadastro():
@@ -48,13 +48,16 @@ def pagina_cadastro():
 
     return redirect(url_for('pagina_login'))
 
-
 # Logout
 @app.route('/logout')
 def logout():
     session.clear()
     return redirect(url_for('principal'))
 
+# Carrinho
+@app.route('/carrinho')
+def pagina_carrinho():
+    return render_template('pagina_carrinho.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

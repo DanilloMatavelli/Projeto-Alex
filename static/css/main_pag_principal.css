@@ -2,6 +2,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+
 }
 
 .main-content {
@@ -62,7 +63,7 @@ body {
 }
 
 .btn-outline-primary{
-  background-color: var(--cor-botoes-categoria);
+  background-color: var(--cor-botoes);
 }
 
 .btn-outline-secondary{
@@ -76,6 +77,43 @@ body {
   border: 2px solid var(--preto); 
   
 }
+
+.btn-outline-primary:focus,
+.btn-outline-primary:active,
+.btn-outline-primary:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: var(--cor-botoes) !important;
+  color: var(--preto) !important;
+  border: 2px solid var(--preto) !important;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--hover-botoes) !important;
+  color: var(--preto) !important;
+  border: 2px solid var(--preto) !important;
+}
+
+.btn-outline-secondary {
+  background-color: var(--cor-botao-todos);
+  font-weight: 1000;
+  color: var(--preto);
+  border: 2px solid var(--preto);
+}
+
+.btn-outline-secondary:focus, .btn-outline-secondary:active, .btn-outline-secondary:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: var(--cor-botao-todos) !important;
+  color: var(--preto) !important;
+  border: 2px solid var(--preto) !important;
+}
+
+.btn-outline-secondary:hover { 
+  color: var(--branco) !important;
+  border: 2px solid var(--preto) !important;
+}
+
 
 
 @media (max-width: 768px) {

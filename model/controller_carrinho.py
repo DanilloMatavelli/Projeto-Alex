@@ -1,21 +1,34 @@
 from data.conexao import conectar
 
+def inserir_comentario(produto_id, cod_usuario, comentario):
+    conexao = conectar.criar_conexao()
+    cursor = conexao.cursor()
 
-class Carrinho:
-    def recuperar_informacoes_produto():
-        # Criar conexão
-        conexao = conectar.criar_conexao()
-        
-        # O cursor será responsavel por manipular o banco de dados 
-        cursor = conexao.cursor(dictionary = True)
-        
-        # Define a consulta SQL
-        sql = """SELECT cod_produto,
-                        nome, 
-                        data_hora,
-                        curtidas,
-                        comentario as mensagem
-                 FROM tb_produto"""
-                 
-        # Executando o comando SQL
-        cursor.execute(sql)
+    sql = """INSERT INTO tb_comentarios (cod_produto, cod_usuario, comentario)
+             VALUES (%s, %s, %s)"""
+             
+    cursor.execute(sql, (produto_id, cod_usuario, comentario))
+    conexao.commit()
+    cursor.close()
+    conexao.close()
+
+
+def listar_comentarios(produto_id):
+    conexao = conectar.criar_conexao()
+    cursor = conexao.cursor(dictionary=True)
+
+    sql = """SELECT u.nome AS nome_usuario, c.comentario
+             FROM tb_comentarios c
+             INNER JOIN tb_usuarios u ON c.cod_usuario = u.cod_usuario
+             WHERE c.cod_produto = %s
+             ORDER BY c.data_hora DESC"""
+
+    cursor.execute(sql, (produto_id,))
+    comentarios = cursor.fetchall()
+
+    cursor.close()
+    conexao.close()
+    return comentarios
+
+
+

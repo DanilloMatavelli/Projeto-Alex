@@ -480,9 +480,26 @@ VALUES (35,
 -- Produto 36: Moletom Gamer
 INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
 VALUES (36, 
+<<<<<<< HEAD
+'https://bemvestir.cdn.magazord.com.br/img/2023/03/produto/9551/16-0597-01.jpg?ims=fit-in/630x945/filters:fill(white)', 
+'https://images.unsplash.com/photo-1607522370275-f14206abe5d3?w=400', 
+'https://images.unsplash.com/photo-1560769629-d641e25e4a5e?w=400');
+
+CREATE TABLE tb_comentario (
+    cod_comentario INT PRIMARY KEY AUTO_INCREMENT,
+    cod_produto INT NOT NULL,
+    cod_usuario INT NOT NULL,
+    texto_comentario TEXT NOT NULL,
+    avaliacao INT CHECK (avaliacao BETWEEN 1 AND 5),
+    data_comentario DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (cod_produto) REFERENCES tb_produto(cod_produto),
+    FOREIGN KEY (cod_usuario) REFERENCES tb_usuario(cod_usuario)
+);
+=======
 'https://img.ltwebstatic.com/images3_pi/2024/12/04/4e/17333043245fa2f4fdfe00c07295365bd25040e5f3_thumbnail_405x.webp', 
 'https://img.ltwebstatic.com/images3_pi/2024/07/19/b6/1721360471dc94faeb872ede800d4d4ff77803c853_thumbnail_560x.webp', 
 'https://img.ltwebstatic.com/images3_pi/2024/07/19/7f/17213604868d55fe7058b35c7731e280c10e28adf5_thumbnail_560x.webp');
+<<<<<<< HEAD
 
 
 -- Fotos dos produtos Moletons, só mostrar todos os produtos 
@@ -492,3 +509,6 @@ SELECT p.cod_produto, p.nome, p.descricao, p.preco, f.url AS imagem_principal,
             LEFT JOIN tb_foto_produto f ON p.cod_produto = f.cod_produto
             LEFT JOIN tb_produto_detalhado d ON p.cod_produto = d.cod_produto
             WHERE p.cod_categoria = 0;
+=======
+>>>>>>> 45d5dad1dc8be83ef8259bfd56a6f1d39cc575a5
+>>>>>>> 2d592f3bb1a18253282edf10ee8a3f8558171810

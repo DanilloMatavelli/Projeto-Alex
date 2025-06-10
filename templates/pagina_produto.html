@@ -85,6 +85,10 @@
                             </div>
                         </div>
                     </div>
+                    <a href="{{ url_for('pagina_detalhado', produto_id=produto.cod_produto) }}">
+    <button class="btn btn-primary">Ver detalhes</button>
+</a>
+
                 {% endfor %}
             </div>
         </section>

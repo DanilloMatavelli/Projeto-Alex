@@ -1,14 +1,17 @@
 from flask import Flask, render_template, request, redirect, url_for, session
 from model.controller_usuario import autenticar_usuario, cadastrar_usuario
+<<<<<<< HEAD
 from model.controller_comentario import inserir_comentario, listar_comentarios
 from model.controller_imagem import obter_imagens
 
+=======
+from model.controller_imagem import obter_imagens
+from model.controller_produto import obter_produtos_por_categoria
+from model.controller_produto_detalhado import obter_produto_detalhado
+>>>>>>> 45d5dad1dc8be83ef8259bfd56a6f1d39cc575a5
 
 app = Flask(__name__)
-app.secret_key = 'chave_super_secreta' 
-
-
-from model.controller_imagem import obter_imagens
+app.secret_key = 'chave_super_secreta'
 
 @app.route('/')
 def principal():
@@ -16,6 +19,13 @@ def principal():
     imagens = obter_imagens()
     return render_template('pagina_principal.html', nome=nome, imagens=imagens)
 
+<<<<<<< HEAD
+=======
+@app.route('/produtos/<int:cod_categoria>')
+def produtos(cod_categoria):
+    produtos = obter_produtos_por_categoria(cod_categoria)
+    return render_template('pagina_produto.html', produtos=produtos, cod_categoria=cod_categoria)
+>>>>>>> 45d5dad1dc8be83ef8259bfd56a6f1d39cc575a5
 
 # Login
 @app.route('/login', methods=['GET', 'POST'])
@@ -35,7 +45,6 @@ def pagina_login():
 
     return render_template('pagina_login.html')
 
-
 # Cadastro
 @app.route('/cadastro', methods=['POST'])
 def pagina_cadastro():
@@ -49,19 +58,28 @@ def pagina_cadastro():
 
     return redirect(url_for('pagina_login'))
 
-
 # Logout
 @app.route('/logout')
 def logout():
     session.clear()
     return redirect(url_for('principal'))
 
+<<<<<<< HEAD
 
 # Rota Carrinho
+=======
+# Carrinho
+>>>>>>> 45d5dad1dc8be83ef8259bfd56a6f1d39cc575a5
 @app.route('/carrinho')
 def pagina_carrinho():
     return render_template('pagina_carrinho.html')
 
+# Rota produto detalhado
+
+@app.route('/produto_detalhado/<int:cod_produto>')
+def produto_detalhado(cod_produto):
+    produto = obter_produto_detalhado(cod_produto)
+    return render_template('pagina_detalhado.html', produto=produto)
 
 # Página de produto com comentários (adicionado a lógica de atualização)
 @app.route('/produto/<int:produto_id>', methods=['GET', 'POST'])

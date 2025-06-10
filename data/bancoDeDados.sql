@@ -331,160 +331,161 @@ VALUES (13,
 -- Produto 14: Bermuda Surf Estampada
 INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
 VALUES (14, 
-'https://osklenbr.vteximg.com.br/arquivos/ids/582584/6837148828_BERMUDA-SURF-WAIKIKI_1.jpg?v=638684018951300000?w=681', 
-'https://images.unsplash.com/photo-1560769629-d641e25e4a5e?w=400', 
-'https://images.unsplash.com/photo-1605733160314-4fc7dac4bb16?w=400');
+'https://trackfield.vtexassets.com/arquivos/ids/254277-1200-1677?v=638052641501630000&width=1200&height=1677&aspect=true', 
+'https://trackfield.vtexassets.com/arquivos/ids/254279-1200-1677?v=638052641803570000&width=1200&height=1677&aspect=true', 
+'https://trackfield.vtexassets.com/arquivos/ids/254280-1200-1677?v=638052641898200000&width=1200&height=1677&aspect=true');
 
 -- Produto 15: Bermuda Ciclista
 INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
 VALUES (15, 
-'https://http2.mlstatic.com/D_NQ_NP_2X_927133-MLB50610093789_072022-F-02-bermudas-ciclismo-bike-acolchoadas-profissional-promoco.webp', 
-'https://images.unsplash.com/photo-1537832816519-689ad163238b?w=400', 
-'https://images.unsplash.com/photo-1607522370275-f14206abe5d3?w=400');
+'https://http2.mlstatic.com/D_NQ_NP_2X_775897-MLB74766388941_022024-F-bermuda-ciclismo-masculina-free-force-basic-preto.webp', 
+'https://http2.mlstatic.com/D_NQ_NP_2X_743238-MLB74766388935_022024-F-bermuda-ciclismo-masculina-free-force-basic-preto.webp', 
+'https://http2.mlstatic.com/D_NQ_NP_2X_628314-MLB74637267040_022024-F-bermuda-ciclismo-masculina-free-force-basic-preto.webp');
 
 -- Produto 16: Bermuda Cargo Masculina
 INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
 VALUES (16, 
-'https://montevie.com/cdn/shop/files/Se612dab0d405464e980500d5fe940477S_800x.webp?v=1725980789', 
-'https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?w=400', 
-'https://images.unsplash.com/photo-1588099768523-f4e6663fa9c8?w=400');
+'https://montevie.com/cdn/shop/files/S623cc369829f4377b04df0cbbc81a842q_800x.webp?v=1725980792', 
+'https://montevie.com/cdn/shop/files/Sd5ec47450dba485591ea8f46765add58r_800x.webp?v=1725980792', 
+'https://montevie.com/cdn/shop/files/S857d499874384c15aa34067f9e94e253R_800x.webp?v=1725980789');
 
 -- Produto 17: Bermuda Infantil Super-Heróis
 INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
 VALUES (17, 
-'https://grupokyly.vteximg.com.br/arquivos/ids/259643-1000-1000/1000363_3449_B.jpg?v=638700442640630000', 
-'https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=400', 
-'https://images.unsplash.com/photo-1574408891259-26e3a2de251d?w=400');
+'https://torratorra.vteximg.com.br/arquivos/ids/2253328-960-1200/352310001310938.jpg?v=638751963212330000', 
+'https://torratorra.vteximg.com.br/arquivos/ids/2253330-960-1200/352310001310938.jpg?v=638751963249270000', 
+'https://torratorra.vteximg.com.br/arquivos/ids/2253331-960-1200/352310001310938.jpg?v=638751963267670000');
 
 -- Produto 18: Bermuda Fitness DryFit
 INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
 VALUES (18, 
 'https://www.gsuplementos.com.br/upload/produto/imagem/shorts-de-treino-growth-growth-supplements-1.webp', 
-'https://images.unsplash.com/photo-1558618666-cbd2305aef45?w=400', 
-'https://images.unsplash.com/photo-1560243563-062d244a51b1?w=400');
+'https://www.lojamirante.com.br/uploads/dirImage/79/524x520_5d8d0a4306572d488c540caaca4b2e96.webp', 
+'https://www.lojamirante.com.br/uploads/dirImage/79/524x520_b7d52b94d17cb6090e8d1256f93a4ec7.webp');
 
 -- Produto 19: Camisa Polo Clássica
 INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
 VALUES (19, 
-'https://d1zvfmhlebc91g.cloudfront.net/fit-in/0x0/filters:fill(ffffff)/filters:quality(98)/n49shopv2_spazziojeans/images/products/80512_polo-piquet-classica-054-pr-1615-0067587_z2_638122377654539294.jpg', 
-'https://images.unsplash.com/photo-1584735175315-9d5df23860e6?w=400', 
-'https://images.unsplash.com/photo-1582588678413-dbf45f4823e9?w=400');
+'https://www.lojamirante.com.br/uploads/dirImage/72/524x520_eadef02a1ebe6e3ec549effb71d84405.webp', 
+'https://www.lojamirante.com.br/uploads/dirImage/72/524x520_7cdaa0141bad87d5b86a32822c4ad699.webp', 
+'https://www.lojamirante.com.br/uploads/dirImage/18/524x520_3608ba4ce30e1c8d56d8190daa05a821.webp');
 
 -- Produto 20: Camisa Social Slim
 INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
 VALUES (20, 
-'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmISaXBZdSO4LaeBFlhHzwBP1pjKeIphhDEQ&s', 
-'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400', 
-'https://images.unsplash.com/photo-1555274175-6cbdc399fe8e?w=400');
+'https://m.media-amazon.com/images/I/51hiHWUJyIL._AC_SX522_.jpg', 
+'https://m.media-amazon.com/images/I/51bT9bazBLL._AC_SX522_.jpg', 
+'https://m.media-amazon.com/images/I/51ar8SsnP3L._AC_SX522_.jpg');
 
 -- Produto 21: Camisa Xadrez Masculina
 INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
 VALUES (21, 
-'https://http2.mlstatic.com/D_NQ_NP_2X_841044-MLB80018016887_102024-F-camisa-xadrez-masculina-manga-longa-lenhador-coleco-vero.webp', 
-'https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=400', 
-'https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=400');
+'https://www.youcom.com.br/_next/image?url=https%3A%2F%2Fimg.youcom.com.br%2FCustom%2FContent%2FProducts%2F11%2F44%2F1144846_camisa-ml-over-xadrez-101225276_z5_638814527944883203.webp&w=1080&q=100', 
+'https://www.youcom.com.br/_next/image?url=https%3A%2F%2Fimg.youcom.com.br%2FCustom%2FContent%2FProducts%2F11%2F44%2F1144846_camisa-ml-over-xadrez-101225276_z4_638814527919569955.webp&w=1080&q=100', 
+'https://www.youcom.com.br/_next/image?url=https%3A%2F%2Fimg.youcom.com.br%2FCustom%2FContent%2FProducts%2F11%2F44%2F1144846_camisa-ml-over-xadrez-101225276_z1_638814527846356986.webp&w=1080&q=100');
 
 -- Produto 22: Camisa Manga Longa Linho
 INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
 VALUES (22, 
-'https://cdn.awsli.com.br/2500x2500/1300/1300343/produto/131296244/myr-23-0924818-01jlks41ds.jpg', 
-'https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=400', 
-'https://images.unsplash.com/photo-1600721391689-dd22fe5c8d52?w=400');
+'https://sergiok.vtexassets.com/arquivos/ids/160408/01.01.0119.070-CAMISA-LINHO-CASUAL-AMARELA-6289.jpg?v=638337730633530000', 
+'https://sergiok.vtexassets.com/arquivos/ids/160409/01.01.0119.070-CAMISA-LINHO-CASUAL-AMARELA-6295.jpg?v=638337731018500000', 
+'https://sergiok.vtexassets.com/arquivos/ids/160411/01.01.0119.070-CAMISA-LINHO-CASUAL-AMARELA-6287.jpg?v=638337731368100000');
 
 -- Produto 23: Camisa Estampada Tropical
 INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
 VALUES (23, 
-'https://images.tcdn.com.br/img/img_prod/970725/camisa_manga_curta_estampa_tropical_14521_7_56a4b56ee92ab2d6b17c2ddcc7b66057.jpg', 
-'https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=400', 
-'https://images.unsplash.com/photo-1573158268424-e3d4a3ba3e47?w=400');
+'https://lojausereserva.vtexassets.com/arquivos/ids/7212382-1200-auto?v=638042223161600000&width=1200&height=auto&aspect=true', 
+'https://lojausereserva.vtexassets.com/arquivos/ids/7212380-1200-auto?v=638042223161300000&width=1200&height=auto&aspect=true', 
+'https://lojausereserva.vtexassets.com/arquivos/ids/7212389-1200-auto?v=638042223162070000&width=1200&height=auto&aspect=true');
 
 -- Produto 24: Camisa Jeans Masculina
 INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
 VALUES (24, 
-'https://lojasfirenzo.com/cdn/shop/files/S52c4bdec23fb4f43aa0e1d86e6694800U_800x.webp?v=1741104556', 
-'https://images.unsplash.com/photo-1542838132-92c53300491e?w=400', 
-'https://images.unsplash.com/photo-1556906781-9a412961c28c?w=400');
+'https://img.ltwebstatic.com/images3_spmp/2024/08/27/14/1724689424f9ad38123ba9cd96fe5a06b136c1196e_thumbnail_405x.webp', 
+'https://img.ltwebstatic.com/images3_spmp/2024/08/27/14/17246894247cb1912ecf3627e1807f78b392174240_thumbnail_560x.webp', 
+'https://img.ltwebstatic.com/images3_spmp/2024/08/27/14/172468942407a8ed4406c1f786a4818266fed89025_thumbnail_560x.webp');
 
 -- Produto 25: Camisa Básica Algodão
 INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
 VALUES (25, 
-'https://www.insiderstore.com.br/cdn/shop/files/Foto-01_5.png?v=1748540783&width=1206', 
-'https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=400', 
-'https://images.unsplash.com/photo-1574408891259-26e3a2de251d?w=400');
+'https://www.lojamirante.com.br/uploads/dirImage/14/524x520_8936500b9f0cd4f08502b834a013f80d.webp', 
+'https://www.lojamirante.com.br/uploads/dirImage/14/524x520_5e423dba7c7ee468524f7b1af9053910.webp', 
+'https://www.lojamirante.com.br/uploads/dirImage/115/524x520_dd0888f385b85653dcf1b518e81c2a5f.webp');
 
 -- Produto 26: Camisa Oversized Unissex
 INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
 VALUES (26, 
-'https://acdn-us.mitiendanube.com/stores/417/579/products/aot2-534d96be503c736f2b17302525621006-1024-1024.png', 
-'https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=400', 
-'https://images.unsplash.com/photo-1605733160314-4fc7dac4bb16?w=400');
+'https://img.ltwebstatic.com/v4/j/spmp/2025/04/26/d2/174563308529471cef5ad13a91dc7ca33412ccf7cf_thumbnail_405x.webp', 
+'https://img.ltwebstatic.com/v4/j/spmp/2025/04/26/0f/174563298203704983417d348fcc1616101f4ca66e_thumbnail_560x.webp', 
+'https://img.ltwebstatic.com/v4/j/spmp/2025/04/26/a3/1745632982b2d0a7b68a47589e3d39599195b539bb_thumbnail_560x.webp');
 
 -- Produto 27: Camisa Esportiva Dry
 INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
 VALUES (27, 
-'https://www.lojamirante.com.br/uploads/dirImage/16/524x520_acf3fde08c45a2cf47a75b8c1a3c652a.webp', 
-'https://images.unsplash.com/photo-1542838132-92c53300491e?w=400', 
-'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400');
+'https://www.lojamirante.com.br/uploads/dirImage/16/524x520_d96afacb3e538b5a29264afe14d0d401.webp', 
+'https://www.lojamirante.com.br/uploads/dirImage/16/524x520_ac001871013b5a6764f5b072267c8915.webp', 
+'https://www.lojamirante.com.br/uploads/dirImage/16/524x520_417b8972298388be68431e1517a835eb.webp');
 
 -- Produto 28: Moletom Capuz Básico
 INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
 VALUES (28, 
-'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiCJ8FDMTrgVuU0MCgiGVYQRRcr4OldWrWGA&s', 
-'https://images.unsplash.com/photo-1556906781-9a412961c28c?w=400', 
-'https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=400');
+'https://www.lojamirante.com.br/uploads/dirImage/24/524x520_f87bbc418045ad957040230177ece286.webp', 
+'https://www.lojamirante.com.br/uploads/dirImage/24/524x520_60a5354e9408e71b1b469f0f35b08511.webp', 
+'https://www.lojamirante.com.br/uploads/dirImage/24/524x520_5402f5ae80d15f2c706addf3d3995170.webp');
 
 -- Produto 29: Moletom Estampado Urbano
 INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
 VALUES (29, 
-'https://www.calitta.com/8336-large_default/moletom-masculino-com-capuz-moda-swag-urbano-estampa-nas-mangas.jpg', 
-'https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=400', 
-'https://images.unsplash.com/photo-1590736969955-71cc94901144?w=400');
+'https://d3vnyi5j6ba1mc.cloudfront.net/Custom/Content/Products/17/01/1701035_blusao-moletom-estampado-410100693_z1_638344481028985241.webp', 
+'https://d3vnyi5j6ba1mc.cloudfront.net/Custom/Content/Products/17/01/1701035_blusao-moletom-estampado-410100693_z2_638344481057528485.webp', 
+'https://d3vnyi5j6ba1mc.cloudfront.net/Custom/Content/Products/17/01/1701035_blusao-moletom-estampado-410100693_z3_638344481085007438.webp');
 
 -- Produto 30: Moletom Zíper Unissex
 INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
 VALUES (30, 
-'https://down-br.img.susercontent.com/file/br-11134207-7r98o-lqml29k1vmsf54', 
-'https://images.unsplash.com/photo-1573158268424-e3d4a3ba3e47?w=400', 
-'https://images.unsplash.com/photo-1562157873-818bc0726f68?w=400');
+'https://m.media-amazon.com/images/I/61acfoZWEoL._AC_SX466_.jpg', 
+'https://m.media-amazon.com/images/I/61XYL6agLgL._AC_SY606_.jpg', 
+'https://m.media-amazon.com/images/I/61rEB5C4drL._AC_SY606_.jpg');
 
 -- Produto 31: Moletom Infantil Heróis
 INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
 VALUES (31, 
-'https://images2.marisa.com.br/medias/sys_master/images/images/h7f/h32/16596741652510/CONJ-MOL-CAPUZ-SPIDEY-MESCLA-MESC-2-10057345314-C1.jpg', 
-'https://images.unsplash.com/photo-1555274175-6cbdc399fe8e?w=400', 
-'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400');
+'https://brandili.vtexassets.com/arquivos/ids/516016-1172-1570/55815_1623_0001.jpg?v=638823124563570000', 
+'https://brandili.vtexassets.com/arquivos/ids/519647-1172-1570/55815_1623_0002.jpg?v=638823135834770000', 
+'https://brandili.vtexassets.com/arquivos/ids/522139-1172-1570/55815_1623_0003.jpg?v=638823146428330000');
 
 -- Produto 32: Moletom Flanelado
 INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
 VALUES (32, 
-'https://m.media-amazon.com/images/I/61acfoZWEoL._AC_SX569_.jpg', 
-'https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=400', 
-'https://images.unsplash.com/photo-1467043237213-65f2da53396f?w=400');
+'https://basicamente.com/cdn/shop/files/100011877400237-L1.jpg?v=1713441203&width=1445', 
+'https://basicamente.com/cdn/shop/files/100011877400237-L2.jpg?v=1713441203&width=1445', 
+'https://basicamente.com/cdn/shop/files/100011877400237-L4.jpg?v=1713441203&width=1445');
 
 -- Produto 33: Moletom Canguru Estilizado
 INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
 VALUES (33, 
-'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx-Eqcg-SjCwKiDbM1l5ipO1M4az_XzdMc6g&s', 
-'https://images.unsplash.com/photo-1605812830455-250e8ba25629?w=400', 
-'https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=400');
+'https://img.ltwebstatic.com/images3_spmp/2024/07/11/1b/17207114943af2e1de487ca3bc8d9b4db6f3487a4b_thumbnail_405x.webp', 
+'https://img.ltwebstatic.com/images3_spmp/2024/07/11/b7/17207115457d65827a7653139d44a9d52ea148388b_thumbnail_560x.webp', 
+'https://img.ltwebstatic.com/images3_spmp/2024/07/11/98/1720711666c427efe49f3efbdc128d321d7a166433_thumbnail_560x.webp');
 
 -- Produto 34: Moletom College Style
 INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
 VALUES (34, 
-'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFrUfmBfwCrbFzXl9dYNoYK5z7FqPS2q-7zA&s', 
-'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=400', 
-'https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=400');
+'https://img.ltwebstatic.com/images3_pi/2023/10/11/99/16970125654f9ac03eca793ec40338ea0aa2ea6664_thumbnail_405x.webp', 
+'https://img.ltwebstatic.com/images3_pi/2023/10/11/80/169701256758c6391542b7a3159b5ce86b3fd961ee_thumbnail_560x.webp', 
+'https://img.ltwebstatic.com/images3_pi/2023/10/11/8a/169701256995faaaeab70bfd27190a169dd8f540e6_thumbnail_560x.webp');
 
 -- Produto 35: Moletom Sem Capuz Slim
 INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
 VALUES (35, 
-'https://santogato.com/161-large_default/jaqueta-social-de-moletom-masculino-slim-sem-capuz-estilo-elegante.jpg', 
-'https://images.unsplash.com/photo-1588099768523-f4e6663fa9c8?w=400', 
-'https://images.unsplash.com/photo-1537832816519-689ad163238b?w=400');
+'https://www.lojamirante.com.br/uploads/dirImage/23/524x520_1950310633fc8170285e8ebc4722e86f.webp', 
+'https://www.lojamirante.com.br/uploads/dirImage/23/524x520_530570e18cb0d90055b514c2b91e108d.webp', 
+'https://www.lojamirante.com.br/uploads/dirImage/23/524x520_df8354003457cb835e022fecc8c22447.webp');
 
 -- Produto 36: Moletom Gamer
 INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
 VALUES (36, 
+<<<<<<< HEAD
 'https://bemvestir.cdn.magazord.com.br/img/2023/03/produto/9551/16-0597-01.jpg?ims=fit-in/630x945/filters:fill(white)', 
 'https://images.unsplash.com/photo-1607522370275-f14206abe5d3?w=400', 
 'https://images.unsplash.com/photo-1560769629-d641e25e4a5e?w=400');
@@ -499,3 +500,8 @@ CREATE TABLE tb_comentario (
     FOREIGN KEY (cod_produto) REFERENCES tb_produto(cod_produto),
     FOREIGN KEY (cod_usuario) REFERENCES tb_usuario(cod_usuario)
 );
+=======
+'https://img.ltwebstatic.com/images3_pi/2024/12/04/4e/17333043245fa2f4fdfe00c07295365bd25040e5f3_thumbnail_405x.webp', 
+'https://img.ltwebstatic.com/images3_pi/2024/07/19/b6/1721360471dc94faeb872ede800d4d4ff77803c853_thumbnail_560x.webp', 
+'https://img.ltwebstatic.com/images3_pi/2024/07/19/7f/17213604868d55fe7058b35c7731e280c10e28adf5_thumbnail_560x.webp');
+>>>>>>> 45d5dad1dc8be83ef8259bfd56a6f1d39cc575a5

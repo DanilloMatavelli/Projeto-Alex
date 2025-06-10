@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for, session
 from model.controller_usuario import autenticar_usuario, cadastrar_usuario
 from model.controller_imagem import obter_imagens
 from model.controller_produto import obter_produtos_por_categoria
-from model.controller_produto_detalhado import obter_produto_detalhado
+
 
 app = Flask(__name__)
 app.secret_key = 'chave_super_secreta'

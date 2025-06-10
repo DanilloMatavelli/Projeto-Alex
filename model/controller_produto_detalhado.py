@@ -1,7 +1,6 @@
 from data.conexao import conectar
 
 class ProdutoDetalhado:
-    @staticmethod
     def obter_produto_detalhado(cod_produto):
         conexao = conectar.criar_conexao()
         cursor = conexao.cursor(dictionary=True)

@@ -65,6 +65,7 @@ def pagina_carrinho():
 @app.route('/produto_detalhado/<int:cod_produto>')
 def produto_detalhado(cod_produto):
     produto = obter_produto_detalhado(cod_produto)
+    
     return render_template('pagina_detalhado.html', produto=produto)
 
 if __name__ == '__main__':

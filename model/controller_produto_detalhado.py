@@ -6,7 +6,7 @@ class ProdutoDetalhado:
         cursor = conexao.cursor(dictionary=True)
 
         sql = """
-        SELECT cod_produto, nome, descricao, preco, imagem_url
+        SELECT cod_produto, nome, descricao, preco
         FROM tb_produto
         WHERE cod_produto = %s
         """

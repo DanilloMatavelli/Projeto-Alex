@@ -27,6 +27,15 @@ body {
   text-align: center;
 }
 
+/* Corrigir tamanho das imagens no carrossel */
+.carousel-item img {
+  max-height: 400px;
+  width: auto;
+  margin: 0 auto;
+  display: block;
+  object-fit: contain;
+}
+
 .categorias {
   padding: 2rem;
   text-align: center;

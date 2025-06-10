@@ -4,7 +4,6 @@ def obter_produto_detalhado(cod_produto):
     conexao = conectar()
     cursor = conexao.cursor(dictionary=True)
 
-    # Consulta principal do produto
     sql_produto = """
         SELECT p.cod_produto, p.nome, p.descricao, p.preco,
                f1.url AS imagem_url,

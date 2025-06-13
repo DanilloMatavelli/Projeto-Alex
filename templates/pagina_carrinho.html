@@ -25,66 +25,70 @@
     {% include 'header.html' %}
 
     <main>
-        <div class="container mt-4">
-            <div class="bg-light rounded-4 p-4 shadow">
-            <div class="row">
-                   
-                <div class="col-lg-8 mb-4">
-                        <h3 class="mb-4 fw-bold">Meu Carrinho</h3>
+  <div class="container mt-4">
+    <div class="bg-light rounded-4 p-4 shadow">
+      <div class="row">
 
-                        {% if itens %}
-                            <div class="card carrinho-card rounded-4 p-3 position-relative">
-                                {% for item in itens %}
-                                <div class="row align-items-center mb-3">
-                                <div class="col-auto">
-                                        <div class="bg-white rounded-2 p-3 border" style="width: 80px; height: 80px;">
-                                            <img src="{{ item.imagem_url }}" alt="{{ item.nome }}" class="img-fluid">
-                                        </div>
-                                </div>
-                                <div class="col">
-                                        <h5 class="mb-1 fw-bold">{{ item.nome }}</h5>
-                                        <p class="mb-0 text-muted">Categoria: {{ item.categoria }}</p>
-                                </div>
-                                    <div class="col-auto text-center">
-                                        <h4 class="fw-bold">R$ {{ item.preco }}</h4>
-                                    </div>
-                                </div>
-                                <hr class="my-3 border-secondary">
-                                {% endfor %}
-                            </div>
-                        {% else %}
-                            <p>Seu carrinho está vazio.</p>
-                        {% endif %}
+        <!-- Coluna: Itens do carrinho -->
+        <div class="col-lg-8 mb-4">
+          <h3 class="mb-4 fw-bold">Meu Carrinho</h3>
+
+          {% if itens %}
+            <div class="card carrinho-card rounded-4 p-3">
+              {% for item in itens %}
+                <div class="row align-items-center mb-4">
+                  <div class="col-auto">
+                    <div class="bg-white rounded-2 p-2 border">
+                      <img src="{{ item.imagem_url }}" alt="{{ item.nome }}" class="produto-imagem">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <h5 class="mb-1 fw-bold">{{ item.nome }}</h5>
+                    <p class="mb-0 text-muted">Categoria: {{ item.categoria }}</p>
+                  </div>
+                  <div class="col-auto text-end">
+                    <h4 class="fw-bold">R$ {{ item.preco }}</h4>
+                  </div>
                 </div>
-
-                    
-                <div class="col-lg-4">
-                        <h3 class="mb-4 fw-bold">Resumo da Compra</h3>
-
-                        <div class="card border-2 rounded-4 p-3">
-                            <div class="mb-4">
-                                <strong class="fs-6">Valor Total: R$ 
-                                    {% set total = 0 %}
-                                    {% for item in itens %}
-                                        {% set total = total + item.preco %}
-                                    {% endfor %}
-                                    {{ total | round(2) }}
-                                </strong>
-                            </div>
-
-                            <button class="btn btn-primary bg-opacity-50 border-0 w-100 mb-2 fw-semibold text-dark">
-                                Finalizar
-                            </button>
-
-                            <button class="btn btn-primary bg-opacity-50 border-0 w-100 fw-semibold text-dark">
-                                Escolher mais produtos
-                            </button>
-                        </div>
-                </div>
+                {% if not loop.last %}
+                  <hr class="my-3 border-secondary">
+                {% endif %}
+              {% endfor %}
             </div>
-            </div>
+          {% else %}
+            <p>Seu carrinho está vazio.</p>
+          {% endif %}
         </div>
-    </main>
+
+        <!-- Coluna: Resumo -->
+        <div class="col-lg-4">
+          <h3 class="mb-4 fw-bold">Resumo da Compra</h3>
+
+          <div class="card resumo-card">
+            <div class="mb-4">
+              <strong class="fs-6">Valor Total: R$
+                {% set total = 0 %}
+                {% for item in itens %}
+                  {% set total = total + item.preco %}
+                {% endfor %}
+                {{ total | round(2) }}
+              </strong>
+            </div>
+
+            <button class="btn btn-primary w-100 mb-2">
+              Finalizar
+            </button>
+
+            <button class="btn btn-primary w-100">
+              Escolher mais produtos
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</main>
 
     {% include 'footer.html' %}
 

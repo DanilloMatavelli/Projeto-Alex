@@ -1,6 +1,7 @@
 html, body {
   height: 100%;
   margin: 0;
+  font-family: 'Nunito', sans-serif;
 }
 
 body {
@@ -9,67 +10,58 @@ body {
 }
 
 main {
-  flex: 0.84;
+  flex: 1;
+  padding: 2rem 0;
 }
 
-
-.header {
-  background-color: var(--cor-gradient-1);
-  color: var(--branco);
-}
-
-.footer {
-  background-color: var(--cor-gradient-1);
-  color: var(--branco);
-  margin-bottom: -100px;
-  padding: 1rem 2rem;
-}
-
-.logo a {
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  line-height: 1;
-}
-
-.rounded-4{
-  width: 700px;
-  height: auto;
-  
-
-}
-
-.card{
-  width: 600px;
-
-}
-
-.container{
+.container {
   display: flex;
   gap: 30px;
-  
+  justify-content: center;
 }
 
-
-.btn-primary {
-  background-color: var(--cor-botoes) !important;
-  border: 2px solid var(--preto) !important;
-  color: var(--preto) !important;
-  box-shadow: none !important;
+.rounded-4 {
+  border-radius: 1.25rem !important;
 }
 
-.btn-primary:hover {
-  background-color: var(--hover-botoes) !important; /* se quiser efeito ao passar o mouse */
-  color: var(--preto) !important;
+.card {
+  border-radius: 1.25rem !important;
+  padding: 20px;
 }
 
-.card .btn-primary { /* ou o que envolva os botões no resumo */
-  border: 2px solid var(--preto) !important;
-}
-
+/* Card de produto */
 .carrinho-card {
   background-color: var(--cor-botoes) !important;
   border: 2px solid var(--preto) !important;
   color: var(--preto);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+.produto-imagem {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+/* Resumo da compra */
+.resumo-card {
+  background-color: #fff;
+  border: 2px solid var(--preto);
+  border-radius: 1.25rem;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Botões */
+.btn-primary {
+  background-color: var(--cor-botoes) !important;
+  border: 2px solid var(--preto) !important;
+  color: var(--preto) !important;
+  height: 50px;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background-color: var(--hover-botoes) !important;
+  color: var(--preto) !important;
+}

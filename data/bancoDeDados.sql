@@ -95,21 +95,12 @@ CREATE TABLE tb_carrinho (
     cod_carrinho INT PRIMARY KEY AUTO_INCREMENT,
     cod_usuario INT,
     cod_produto INT,
+    quantidade INT DEFAULT 1,
     data_criacao DATETIME DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (cod_usuario) REFERENCES tb_usuario(cod_usuario),
     FOREIGN KEY (cod_produto) REFERENCES tb_produto(cod_produto)
 );
 
-
--- Tabela Itens do Carrinho (Produtos que estão no carrinho)
-CREATE TABLE tb_item_carrinho (
-    cod_item INT PRIMARY KEY AUTO_INCREMENT,
-    cod_carrinho INT,
-    cod_produto INT,
-    quantidade INT DEFAULT 1,
-    FOREIGN KEY (cod_carrinho) REFERENCES tb_carrinho(cod_carrinho),
-    FOREIGN KEY (cod_produto) REFERENCES tb_produto(cod_produto)
-);
 
 -- Tabela de Fotos dos Produtos
 CREATE TABLE tb_foto_produto (

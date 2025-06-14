@@ -49,7 +49,7 @@
                   <p class="mb-0 text-muted">Categoria: {{ item.categoria }}</p>
                 </div>
                 <div class="col-auto text-end">
-                  <h4 class="fw-bold">R$ {{ item.preco }}</h4>
+                  <h4 class="fw-bold">R$ {{ "%.2f"|format(item.preco * item.quantidade) }}</h4>
                 </div>
               </div>
               {% if not loop.last %}
@@ -69,8 +69,8 @@
             <div class="card resumo-card">
               <div class="mb-4">
                 <strong class="fs-6">Valor Total: R$
-                  {% set total = itens | sum(attribute='preco') %}
-                  {{ "%.2f"|format(total) }}
+                {% set total = itens | sum(attribute='preco', start=0) %}
+                {{ "%.2f"|format(total) }}
 
                 </strong>
               </div>

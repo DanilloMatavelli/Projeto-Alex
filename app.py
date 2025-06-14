@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, session
+from flask import Flask, flash, render_template, request, redirect, url_for, session
 from model.controller_usuario import autenticar_usuario, cadastrar_usuario
 from model.controller_imagem import obter_imagens
 from model.controller_produto import obter_produtos_por_categoria
@@ -80,16 +80,17 @@ def produto_detalhado(cod_produto):
 
 
 # app.py
-@app.route("/adicionar-carrinho", methods=["POST"])
-def rota_adicionar_carrinho():
-    cod_usuario = session.get("cod_usuario")
-    cod_produto = request.form["cod_produto"]
 
-    if cod_usuario is None:
-        return redirect(url_for('pagina_login'))
+@app.route("/adicionar-carrinho", methods=["POST"]) 
+def rota_adicionar_carrinho(): 
+    cod_usuario = session.get("cod_usuario") 
+    cod_produto = request.form["cod_produto"] 
 
-    adicionar_ao_carrinho(cod_usuario, cod_produto)
-    return redirect(url_for("ver_carrinho"))  # Redireciona para a página do carrinho
+    if cod_usuario is None: 
+        return redirect(url_for('pagina_login')) 
+    adicionar_ao_carrinho(cod_usuario, cod_produto) 
+    return redirect(url_for("ver_carrinho")) # Redireciona para a página do carrinho
+
 
 
 if __name__ == '__main__':

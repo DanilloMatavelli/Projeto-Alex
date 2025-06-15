@@ -156,7 +156,18 @@
   </div>
 
 
-  <div class="avaliacoes">
+  <div class="avaliacoes container">
+    <h4 class="avaliacoes__titulo">Adicionar comentário</h4>
+
+    <!-- Formulário para enviar nova avaliação -->
+    <form>
+      <div class="mb-3">
+        <textarea name="comentario" class="form-control" rows="3" placeholder="Comentário..."></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Enviar avaliação</button>
+    </form>
+
+    <!-- Lista de avaliações -->
     <h4 class="avaliacoes__titulo">Avaliações</h4>
 
     <div class="avaliacao-card">
@@ -174,6 +185,7 @@
       <p>Lindo shorts, porém chegou depois do prazo</p>
     </div>
   </div>
+
 
   {% include 'footer.html' %}
 

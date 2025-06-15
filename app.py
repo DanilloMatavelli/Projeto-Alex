@@ -3,6 +3,7 @@ from model.controller_usuario import autenticar_usuario, cadastrar_usuario
 from model.controller_imagem import obter_imagens
 from model.controller_produto import obter_produtos_por_categoria
 from model.controller_produto_detalhado import obter_produto_detalhado
+from model.controller_produto_detalhado import obter_imagens_do_produto
 from model.controller_carrinho import adicionar_ao_carrinho, listar_itens_carrinho
 
 app = Flask(__name__)
@@ -72,10 +73,18 @@ def ver_carrinho():
 
 
 # Rota produto detalhado
+# @app.route('/produto_detalhado/<int:cod_produto>')
+# def produto_detalhado(cod_produto):
+#     produto = obter_produto_detalhado(cod_produto)
+#     return render_template('pagina_detalhado.html', produto=produto)
+
 @app.route('/produto_detalhado/<int:cod_produto>')
 def produto_detalhado(cod_produto):
     produto = obter_produto_detalhado(cod_produto)
-    return render_template('pagina_detalhado.html', produto=produto)
+    imagens = obter_imagens_do_produto(cod_produto)
+    return render_template('pagina_detalhado.html', produto=produto, imagens=imagens)
+
+
 
 
 
@@ -90,17 +99,6 @@ def rota_adicionar_carrinho():
         return redirect(url_for('pagina_login')) 
     adicionar_ao_carrinho(cod_usuario, cod_produto) 
     return redirect(url_for("ver_carrinho")) # Redireciona para a página do carrinho
-
-
-# @app.route("/adicionar-carrinho", methods=["POST"]) 
-# def rota_adicionar_carrinho(): 
-#     cod_usuario = session.get("cod_usuario")
-#     itens = listar_itens_carrinho(cod_usuario)
-
-#     # Calcular o valor total geral
-#     valor_total = sum(item["preco"] * item["quantidade"] for item in itens)
-
-#     return render_template("pagina_carrinho.html", itens=itens, valor_total=valor_total)
 
 
 

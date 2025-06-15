@@ -86,6 +86,8 @@ def produto_detalhado(cod_produto):
 @app.route("/enviar-comentario", methods=["POST"])
 def enviar_comentario():
     cod_usuario = session.get("cod_usuario")
+    if not cod_usuario:
+        return redirect(url_for('pagina_login'))
     cod_produto = request.form.get("cod_produto")
     comentario = request.form.get("comentario")
 

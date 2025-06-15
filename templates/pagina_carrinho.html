@@ -74,7 +74,7 @@
               {% for item in itens %}
               <div class="mb-4">
                 <strong class="fs-6">Valor Total: R$
-                  R$ {{ "%.2f"|format(item.preco * item.quantidade) }}
+                  {{ "%.2f"|format(item.preco * item.quantidade) }}
 
                 </strong>
               </div>

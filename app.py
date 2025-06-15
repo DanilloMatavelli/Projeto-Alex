@@ -110,6 +110,18 @@ def rota_adicionar_carrinho():
     adicionar_ao_carrinho(cod_usuario, cod_produto) 
     return redirect(url_for("ver_carrinho")) # Redireciona para a página do carrinho
 
+# @app.route("/adicionar-carrinho", methods=["POST"]) 
+# def rota_adicionar_carrinho(): 
+#     cod_usuario = session.get("cod_usuario")
+#     if cod_usuario is None:
+#         return redirect(url_for("pagina_login"))
+
+#     itens = listar_itens_carrinho(cod_usuario)
+#     total = sum(item["preco"] * item["quantidade"] for item in itens) if itens else 0.0
+
+#     return render_template("pagina_carrinho.html", itens=itens, total=total)
+
+
 
 
 

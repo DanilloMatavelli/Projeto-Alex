@@ -45,6 +45,7 @@ def listar_itens_carrinho(cod_usuario):
         LEFT JOIN tb_categoria cat ON p.cod_categoria = cat.cod_categoria
         WHERE c.cod_usuario = %s
 
+
 """ 
 
     cursor.execute(sql, (cod_usuario, cod_usuario)) 

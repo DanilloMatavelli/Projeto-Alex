@@ -92,6 +92,23 @@ def rota_adicionar_carrinho():
     return redirect(url_for("ver_carrinho")) # Redireciona para a página do carrinho
 
 
+# @app.route("/adicionar-carrinho", methods=["POST"]) 
+# def rota_adicionar_carrinho(): 
+#     cod_usuario = session.get("cod_usuario")
+#     itens = listar_itens_carrinho(cod_usuario)
+
+#     # Calcular o valor total geral
+#     valor_total = sum(item["preco"] * item["quantidade"] for item in itens)
+
+#     return render_template("pagina_carrinho.html", itens=itens, valor_total=valor_total)
+
+
+
+
+
+
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)

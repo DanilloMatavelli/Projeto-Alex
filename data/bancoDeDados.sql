@@ -504,6 +504,18 @@ VALUES (36,
 'https://img.ltwebstatic.com/images3_pi/2024/07/19/b6/1721360471dc94faeb872ede800d4d4ff77803c853_thumbnail_560x.webp', 
 'https://img.ltwebstatic.com/images3_pi/2024/07/19/7f/17213604868d55fe7058b35c7731e280c10e28adf5_thumbnail_560x.webp');
 
+CREATE TABLE tb_avaliacao (
+    cod_avaliacao INT PRIMARY KEY AUTO_INCREMENT,
+    cod_usuario INT NOT NULL,
+    cod_produto INT NOT NULL,
+    comentario TEXT NOT NULL,
+    data_comentario DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (cod_usuario) REFERENCES tb_usuario(cod_usuario),
+    FOREIGN KEY (cod_produto) REFERENCES tb_produto(cod_produto)
+);
+
+
+
 
 -- Fotos dos produtos Moletons, só mostrar todos os produtos 
 SELECT p.cod_produto, p.nome, p.descricao, p.preco, f.url AS imagem_principal,

@@ -160,30 +160,28 @@
     <h4 class="avaliacoes__titulo">Adicionar comentário</h4>
 
     <!-- Formulário para enviar nova avaliação -->
-    <form>
-      <div class="mb-3">
-        <textarea name="comentario" class="form-control" rows="3" placeholder="Comentário..."></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary">Enviar avaliação</button>
+    <form action="{{ url_for('enviar_comentario') }}" method="POST" class="mb-4">
+      <input type="hidden" name="cod_produto" value="{{ produto.cod_produto }}">
+      <textarea name="comentario" class="form-control" rows="3" placeholder="Escreva seu comentário..."></textarea>
+      <button type="submit" class="btn btn-primary mt-2">Enviar avaliação</button>
     </form>
 
+
+    <!-- Lista de avaliações -->
     <!-- Lista de avaliações -->
     <h4 class="avaliacoes__titulo">Avaliações</h4>
 
+    {% if comentarios %}
+    {% for c in comentarios %}
     <div class="avaliacao-card">
-      <strong>Miguel Câmara</strong>
-      <p>Excelente bermuda!</p>
+      <strong>{{ c.nome }}</strong>
+      <p>{{ c.comentario }}</p>
     </div>
+    {% endfor %}
+    {% else %}
+    <p class="text-muted">Nenhuma avaliação ainda.</p>
+    {% endif %}
 
-    <div class="avaliacao-card">
-      <strong>Arthur Rampazi</strong>
-      <p>Não gostei, muito curto</p>
-    </div>
-
-    <div class="avaliacao-card">
-      <strong>Miguel Luís</strong>
-      <p>Lindo shorts, porém chegou depois do prazo</p>
-    </div>
   </div>
 
 

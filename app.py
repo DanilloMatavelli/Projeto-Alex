@@ -11,20 +11,24 @@ from model.controller_carrinho import adicionar_ao_carrinho, listar_itens_carrin
 app = Flask(__name__)
 app.secret_key = 'chave_super_secreta'
 
+
 @app.route('/')
 def principal():
     nome = session.get('nome')
     imagens = obter_imagens()
     return render_template('pagina_principal.html', nome=nome, imagens=imagens)
 
+
 @app.route('/produtos/<int:cod_categoria>')
 def produtos(cod_categoria):
+    nome = session.get('nome')
     produtos = obter_produtos_por_categoria(cod_categoria)
-    return render_template('pagina_produto.html', produtos=produtos, cod_categoria=cod_categoria)
+    return render_template('pagina_produto.html', produtos=produtos, cod_categoria=cod_categoria, nome=nome)
 
-# Login
+
 @app.route('/login', methods=['GET', 'POST'])
 def pagina_login():
+    nome = session.get('nome')
     if request.method == 'POST':
         email = request.form['email']
         senha = request.form['senha']
@@ -36,58 +40,60 @@ def pagina_login():
             session['nome'] = usuario[1]
             return redirect(url_for('principal'))
         else:
-            return render_template('pagina_login.html', erro="Email ou senha incorretos")
+            return render_template('pagina_login.html', erro="Email ou senha incorretos", nome=nome)
 
-    return render_template('pagina_login.html')
+    return render_template('pagina_login.html', nome=nome)
 
-# Cadastro
+
 @app.route('/cadastro', methods=['GET', 'POST'])
 def pagina_cadastro():
+    nome = session.get('nome')
     if request.method == 'POST':
-        nome = request.form['nome']
+        nome_cadastro = request.form['nome']
         email = request.form['email']
         senha = request.form['senha']
         endereco = request.form['endereco']
         telefone = request.form['telefone']
 
-        cadastrar_usuario(nome, email, senha, endereco, telefone)
+        cadastrar_usuario(nome_cadastro, email, senha, endereco, telefone)
         return redirect(url_for('pagina_login'))
-    
-    return render_template('pagina_cadastro.html')  # Página com o formulário de cadastro
 
-# Logout
+    return render_template('pagina_cadastro.html', nome=nome)
+
+
 @app.route('/logout')
 def logout():
     session.clear()
     return redirect(url_for('principal'))
 
+
 @app.route("/carrinho")
 def ver_carrinho():
+    nome = session.get('nome')
     cod_usuario = session.get("cod_usuario")
     if not cod_usuario:
         return redirect(url_for('pagina_login'))
 
-    # Listando os itens do carrinho
     itens = listar_itens_carrinho(cod_usuario)
-    
-    # Certifique-se de que a página de carrinho é renderizada corretamente
-    return render_template("pagina_carrinho.html", itens=itens)
+    return render_template("pagina_carrinho.html", itens=itens, nome=nome)
+
 
 @app.route('/produto_detalhado/<int:cod_produto>')
 def produto_detalhado(cod_produto):
+    nome = session.get('nome')
     produto = obter_produto_detalhado(cod_produto)
     imagens = obter_imagens_do_produto(cod_produto)
     comentarios = listar_comentarios(cod_produto)
-    return render_template('pagina_detalhado.html', produto=produto, imagens=imagens, comentarios=comentarios)
+    return render_template('pagina_detalhado.html', produto=produto, imagens=imagens, comentarios=comentarios, nome=nome)
 
 
-
-# rota para enviar um comentario
 @app.route("/enviar-comentario", methods=["POST"])
 def enviar_comentario():
+    nome = session.get('nome')
     cod_usuario = session.get("cod_usuario")
     if not cod_usuario:
         return redirect(url_for('pagina_login'))
+
     cod_produto = request.form.get("cod_produto")
     comentario = request.form.get("comentario")
 
@@ -100,34 +106,17 @@ def enviar_comentario():
     return redirect(url_for("produto_detalhado", cod_produto=cod_produto))
 
 
-@app.route("/adicionar-carrinho", methods=["POST"]) 
-def rota_adicionar_carrinho(): 
-    cod_usuario = session.get("cod_usuario") 
-    cod_produto = request.form["cod_produto"] 
+@app.route("/adicionar-carrinho", methods=["POST"])
+def rota_adicionar_carrinho():
+    nome = session.get('nome')
+    cod_usuario = session.get("cod_usuario")
+    cod_produto = request.form["cod_produto"]
 
-    if cod_usuario is None: 
-        return redirect(url_for('pagina_login')) 
-    adicionar_ao_carrinho(cod_usuario, cod_produto) 
-    return redirect(url_for("ver_carrinho")) # Redireciona para a página do carrinho
+    if cod_usuario is None:
+        return redirect(url_for('pagina_login'))
 
-# @app.route("/adicionar-carrinho", methods=["POST"]) 
-# def rota_adicionar_carrinho(): 
-#     cod_usuario = session.get("cod_usuario")
-#     if cod_usuario is None:
-#         return redirect(url_for("pagina_login"))
-
-#     itens = listar_itens_carrinho(cod_usuario)
-#     total = sum(item["preco"] * item["quantidade"] for item in itens) if itens else 0.0
-
-#     return render_template("pagina_carrinho.html", itens=itens, total=total)
-
-
-
-
-
-
-
-
+    adicionar_ao_carrinho(cod_usuario, cod_produto)
+    return redirect(url_for("ver_carrinho"))
 
 
 if __name__ == '__main__':

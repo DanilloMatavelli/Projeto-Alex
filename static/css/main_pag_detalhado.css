@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 
 
 .btn-primary{
@@ -14,7 +14,7 @@
 .avaliacao-card{
     background-color: var(--cor-botoes) !important;
 }
-=======
+
 /* Estrutura geral */
 .page {
   display: flex;
@@ -86,4 +86,4 @@
     font-size: 1.5rem;
   }
 }
->>>>>>> 926d7ff5e9f8a909e204400f1fbfdbb02b8e551e
+

@@ -9,9 +9,8 @@
   <link rel="stylesheet" href="/static/css/reset.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Open+Sans&family=Roboto&display=swap" rel="stylesheet" />
+
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
@@ -22,34 +21,34 @@
   <link rel="stylesheet" href="/static/css/variables.css" />
 </head>
 
-<body>
+<body class="page">
   {% include 'header.html' %}
 
-  <main>
-    <div class="container mt-4">
-      <div class="bg-light rounded-4 p-4 shadow">
-        <div class="row">
+  <main class="cart">
+    <div class="cart__container container mt-4">
+      <div class="cart__box bg-light rounded-4 p-4 shadow">
+        <div class="cart__content row">
 
           <!-- Coluna: Itens do carrinho -->
-          <div class="col-lg-8 mb-4">
-            <h3 class="mb-4 fw-bold">Meu Carrinho</h3>
+          <div class="cart__items col-lg-8 mb-4">
+            <h3 class="cart__title mb-4 fw-bold">Meu Carrinho</h3>
 
             {% if itens %}
-            <div class="card carrinho-card rounded-4 p-3">
+            <div class="cart__card card rounded-4 p-3">
               {% for item in itens %}
-              <div class="row align-items-center mb-4">
-                <div class="col-auto">
-                  <div class="bg-white rounded-2 p-2 border">
-                    <img src="{{ item.imagem_url }}" alt="{{ item.nome }}" class="produto-imagem" />
+              <div class="cart__item row align-items-center mb-4">
+                <div class="cart__item-image col-auto">
+                  <div class="cart__image-box bg-white rounded-2 p-2 border">
+                    <img src="{{ item.imagem_url }}" alt="{{ item.nome }}" class="cart__image">
                   </div>
                 </div>
-                <div class="col">
-                  <h5 class="mb-1 fw-bold">{{ item.nome }}</h5>
-                  <p class="mb-0 text-muted">Categoria: {{ item.categoria }}</p>
+                <div class="cart__item-info col">
+                  <h5 class="cart__item-title mb-1 fw-bold">{{ item.nome }}</h5>
+                  <p class="cart__item-category mb-0 text-muted">Categoria: {{ item.categoria }}</p>
                 </div>
-                <div class="col-auto text-end">
-                  <h4 class="fw-bold">
-                    R$ {{ "%.2f"|format(item.preco) }} * {{ item.quantidade }} =
+                <div class="cart__item-price col-auto text-end">
+                  <h4 class="cart__price fw-bold">
+                    R$ {{ "%.2f"|format(item.preco) }} * {{ item.quantidade }} = 
                     R$ {{ "%.2f"|format(item.preco * item.quantidade) }}
                   </h4>
                 </div>
@@ -62,32 +61,32 @@
                 </div>
               </div>
               {% if not loop.last %}
-              <hr class="my-3 border-secondary" />
+              <hr class="cart__divider my-3 border-secondary">
               {% endif %}
               {% endfor %}
             </div>
             {% else %}
-            <p>Seu carrinho está vazio.</p>
+            <p class="cart__empty-message">Seu carrinho está vazio.</p>
             {% endif %}
           </div>
 
           <!-- Coluna: Resumo -->
-          <div class="col-lg-4">
-            <h3 class="mb-4 fw-bold">Resumo da Compra</h3>
+          <div class="cart__summary col-lg-4">
+            <h3 class="cart__summary-title mb-4 fw-bold">Resumo da Compra</h3>
 
-            <div class="card resumo-card">
-              <div class="mb-4">
-                <strong class="fs-6">Valor Total: R$
+            <div class="cart__summary-box card">
+              <div class="cart__summary-total mb-4">
+                <strong class="cart__total-text fs-6">Valor Total: R$
                   {% if itens|length > 0 %}
-                  {{ "%.2f"|format(itens[0].total) }}
+                    {{ "%.2f"|format(itens[0].total) }}
                   {% else %}
-                  0,00
+                    0,00
                   {% endif %}
                 </strong>
               </div>
 
-              <button class="btn btn-primary w-100 mb-2">Finalizar</button>
-              <button class="btn btn-primary w-100">Escolher mais produtos</button>
+              <button class="cart__btn btn btn-primary w-100 mb-2">Finalizar</button>
+              <button class="cart__btn btn btn-primary w-100">Escolher mais produtos</button>
             </div>
           </div>
 

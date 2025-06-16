@@ -6,7 +6,7 @@ from model.controller_produto_detalhado import obter_produto_detalhado
 from model.controller_produto_detalhado import obter_imagens_do_produto
 from model.controller_produto_detalhado import salvar_comentario
 from model.controller_produto_detalhado import listar_comentarios
-from model.controller_carrinho import adicionar_ao_carrinho, listar_itens_carrinho
+from model.controller_carrinho import adicionar_ao_carrinho, listar_itens_carrinho, remover_do_carrinho  # <-- adicionado aqui
 
 app = Flask(__name__)
 app.secret_key = 'chave_super_secreta'
@@ -117,6 +117,16 @@ def rota_adicionar_carrinho():
 
     adicionar_ao_carrinho(cod_usuario, cod_produto)
     return redirect(url_for("ver_carrinho"))
+
+
+@app.route('/remover-carrinho/<int:cod_produto>', methods=['POST'])
+def remover_carrinho(cod_produto):
+    cod_usuario = session.get('cod_usuario')
+    if not cod_usuario:
+        return redirect(url_for('pagina_login'))
+
+    remover_do_carrinho(cod_usuario, cod_produto)
+    return redirect(url_for('ver_carrinho'))
 
 
 if __name__ == '__main__':

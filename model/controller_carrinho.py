@@ -23,13 +23,12 @@ def adicionar_ao_carrinho(cod_usuario, cod_produto):
     conexao.close()
 
 
-
-
 def listar_itens_carrinho(cod_usuario): 
     conexao = conectar() 
     cursor = conexao.cursor(dictionary=True) 
     sql = """ 
         SELECT 
+            p.cod_produto,
             p.nome, 
             p.preco, 
             c.quantidade,
@@ -44,12 +43,20 @@ def listar_itens_carrinho(cod_usuario):
         LEFT JOIN tb_foto_produto f ON p.cod_produto = f.cod_produto
         LEFT JOIN tb_categoria cat ON p.cod_categoria = cat.cod_categoria
         WHERE c.cod_usuario = %s
-
-
-""" 
+    """ 
 
     cursor.execute(sql, (cod_usuario, cod_usuario)) 
     itens = cursor.fetchall() 
     cursor.close() 
     conexao.close() 
     return itens
+
+
+def remover_do_carrinho(cod_usuario, cod_produto):
+    conexao = conectar()
+    cursor = conexao.cursor()
+    sql_delete = "DELETE FROM tb_carrinho WHERE cod_usuario = %s AND cod_produto = %s"
+    cursor.execute(sql_delete, (cod_usuario, cod_produto))
+    conexao.commit()
+    cursor.close()
+    conexao.close()

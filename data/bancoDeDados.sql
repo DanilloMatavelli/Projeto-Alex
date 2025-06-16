@@ -95,21 +95,12 @@ CREATE TABLE tb_carrinho (
     cod_carrinho INT PRIMARY KEY AUTO_INCREMENT,
     cod_usuario INT,
     cod_produto INT,
+    quantidade INT DEFAULT 1,
     data_criacao DATETIME DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (cod_usuario) REFERENCES tb_usuario(cod_usuario),
     FOREIGN KEY (cod_produto) REFERENCES tb_produto(cod_produto)
 );
 
-
--- Tabela Itens do Carrinho (Produtos que estão no carrinho)
-CREATE TABLE tb_item_carrinho (
-    cod_item INT PRIMARY KEY AUTO_INCREMENT,
-    cod_carrinho INT,
-    cod_produto INT,
-    quantidade INT DEFAULT 1,
-    FOREIGN KEY (cod_carrinho) REFERENCES tb_carrinho(cod_carrinho),
-    FOREIGN KEY (cod_produto) REFERENCES tb_produto(cod_produto)
-);
 
 -- Tabela de Fotos dos Produtos
 CREATE TABLE tb_foto_produto (
@@ -299,133 +290,157 @@ VALUES (9,
 'https://static.netshoes.com.br/produtos/tenis-infantil-skechers-meteor-lights-krendo-menino/18/SEM-0035-118/SEM-0035-118_zoom3.jpg?ts=1743183652&ims=1088x', 
 'https://static.netshoes.com.br/produtos/tenis-infantil-skechers-meteor-lights-krendo-menino/18/SEM-0035-118/SEM-0035-118_zoom4.jpg?ts=1743183652&ims=1088x');
 
--- Produto 10: Bermuda Jeans Tradicional
+-- Camisa 
+-- Produto 10: Camisa Polo Clássica
 INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
 VALUES (10, 
-'https://http2.mlstatic.com/D_NQ_NP_2X_988197-MLB31117217678_062019-F-bermuda-jeans-desconto-envio-imediato-24-horas.webp', 
-'https://img.lojasrenner.com.br/item/929322148/original/13.jpg', 
-'https://img.lojasrenner.com.br/item/929322148/original/14.jpg');
-
--- Produto 11: Bermuda Moletom Basic
-INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
-VALUES (11, 
-'https://www.knulu.com.br/media/catalog/product/cache/1/thumbnail/717x900/9df78eab33525d08d6e5fb8d27136e95/k/n/knulu-moda-masculina-2022-270.jpg', 
-'https://www.knulu.com.br/media/catalog/product/cache/1/thumbnail/717x900/9df78eab33525d08d6e5fb8d27136e95/k/n/knulu-moda-masculina-2022-272.jpg', 
-'https://www.knulu.com.br/media/catalog/product/cache/1/thumbnail/717x900/9df78eab33525d08d6e5fb8d27136e95/k/n/knulu-moda-masculina-2022-273.jpg');
-
--- Produto 12: Bermuda Sarja Slim
-INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
-VALUES (12, 
-'https://storetng.vteximg.com.br/arquivos/ids/471055-0-0/BNMBCH01_504_1-BERMUDA-CHINO-SLIM-COLOR.jpg?v=638350740080870000', 
-'https://storetng.vteximg.com.br/arquivos/ids/471061-0-0/BNMBCH01_504_2-BERMUDA-CHINO-SLIM-COLOR.jpg?v=638350740210070000', 
-'https://storetng.vteximg.com.br/arquivos/ids/471067-0-0/BNMBCH01_504_3-BERMUDA-CHINO-SLIM-COLOR.jpg?v=638350740318600000');
-
--- Produto 13: Bermuda Tática Militar
-INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
-VALUES (13, 
-'https://produtgy.com.br/cdn/shop/products/5df9b61093ca13a7b9e5ba88fd2d749d_c65df500-b45c-4e19-af85-9040befa6c19_600x.jpg?v=1656427625', 
-'https://produtgy.com.br/cdn/shop/products/9_e75c7275_df5a_46b2_32LCa_400x.jpg?v=1656427625', 
-'https://produtgy.com.br/cdn/shop/products/h172c6d5143824b94835_bHaGa_600x.jpg?v=1656427625');
-
--- PAREI AQUI
--- Produto 14: Bermuda Surf Estampada
-INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
-VALUES (14, 
-'https://trackfield.vtexassets.com/arquivos/ids/254277-1200-1677?v=638052641501630000&width=1200&height=1677&aspect=true', 
-'https://trackfield.vtexassets.com/arquivos/ids/254279-1200-1677?v=638052641803570000&width=1200&height=1677&aspect=true', 
-'https://trackfield.vtexassets.com/arquivos/ids/254280-1200-1677?v=638052641898200000&width=1200&height=1677&aspect=true');
-
--- Produto 15: Bermuda Ciclista
-INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
-VALUES (15, 
-'https://http2.mlstatic.com/D_NQ_NP_2X_775897-MLB74766388941_022024-F-bermuda-ciclismo-masculina-free-force-basic-preto.webp', 
-'https://http2.mlstatic.com/D_NQ_NP_2X_743238-MLB74766388935_022024-F-bermuda-ciclismo-masculina-free-force-basic-preto.webp', 
-'https://http2.mlstatic.com/D_NQ_NP_2X_628314-MLB74637267040_022024-F-bermuda-ciclismo-masculina-free-force-basic-preto.webp');
-
--- Produto 16: Bermuda Cargo Masculina
-INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
-VALUES (16, 
-'https://montevie.com/cdn/shop/files/S623cc369829f4377b04df0cbbc81a842q_800x.webp?v=1725980792', 
-'https://montevie.com/cdn/shop/files/Sd5ec47450dba485591ea8f46765add58r_800x.webp?v=1725980792', 
-'https://montevie.com/cdn/shop/files/S857d499874384c15aa34067f9e94e253R_800x.webp?v=1725980789');
-
--- Produto 17: Bermuda Infantil Super-Heróis
-INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
-VALUES (17, 
-'https://torratorra.vteximg.com.br/arquivos/ids/2253328-960-1200/352310001310938.jpg?v=638751963212330000', 
-'https://torratorra.vteximg.com.br/arquivos/ids/2253330-960-1200/352310001310938.jpg?v=638751963249270000', 
-'https://torratorra.vteximg.com.br/arquivos/ids/2253331-960-1200/352310001310938.jpg?v=638751963267670000');
-
--- Produto 18: Bermuda Fitness DryFit
-INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
-VALUES (18, 
-'https://www.gsuplementos.com.br/upload/produto/imagem/shorts-de-treino-growth-growth-supplements-1.webp', 
-'https://www.lojamirante.com.br/uploads/dirImage/79/524x520_5d8d0a4306572d488c540caaca4b2e96.webp', 
-'https://www.lojamirante.com.br/uploads/dirImage/79/524x520_b7d52b94d17cb6090e8d1256f93a4ec7.webp');
-
--- Produto 19: Camisa Polo Clássica
-INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
-VALUES (19, 
 'https://www.lojamirante.com.br/uploads/dirImage/72/524x520_eadef02a1ebe6e3ec549effb71d84405.webp', 
 'https://www.lojamirante.com.br/uploads/dirImage/72/524x520_7cdaa0141bad87d5b86a32822c4ad699.webp', 
 'https://www.lojamirante.com.br/uploads/dirImage/18/524x520_3608ba4ce30e1c8d56d8190daa05a821.webp');
 
--- Produto 20: Camisa Social Slim
+-- Produto 11: Camisa Social Slim
 INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
-VALUES (20, 
+VALUES (11, 
 'https://m.media-amazon.com/images/I/51hiHWUJyIL._AC_SX522_.jpg', 
 'https://m.media-amazon.com/images/I/51bT9bazBLL._AC_SX522_.jpg', 
 'https://m.media-amazon.com/images/I/51ar8SsnP3L._AC_SX522_.jpg');
 
--- Produto 21: Camisa Xadrez Masculina
+-- Produto 12: Camisa Xadrez Masculina
 INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
-VALUES (21, 
+VALUES (12, 
 'https://www.youcom.com.br/_next/image?url=https%3A%2F%2Fimg.youcom.com.br%2FCustom%2FContent%2FProducts%2F11%2F44%2F1144846_camisa-ml-over-xadrez-101225276_z5_638814527944883203.webp&w=1080&q=100', 
 'https://www.youcom.com.br/_next/image?url=https%3A%2F%2Fimg.youcom.com.br%2FCustom%2FContent%2FProducts%2F11%2F44%2F1144846_camisa-ml-over-xadrez-101225276_z4_638814527919569955.webp&w=1080&q=100', 
 'https://www.youcom.com.br/_next/image?url=https%3A%2F%2Fimg.youcom.com.br%2FCustom%2FContent%2FProducts%2F11%2F44%2F1144846_camisa-ml-over-xadrez-101225276_z1_638814527846356986.webp&w=1080&q=100');
 
--- Produto 22: Camisa Manga Longa Linho
+-- Produto 13: Camisa Manga Longa Linho
 INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
-VALUES (22, 
+VALUES (13, 
 'https://sergiok.vtexassets.com/arquivos/ids/160408/01.01.0119.070-CAMISA-LINHO-CASUAL-AMARELA-6289.jpg?v=638337730633530000', 
 'https://sergiok.vtexassets.com/arquivos/ids/160409/01.01.0119.070-CAMISA-LINHO-CASUAL-AMARELA-6295.jpg?v=638337731018500000', 
 'https://sergiok.vtexassets.com/arquivos/ids/160411/01.01.0119.070-CAMISA-LINHO-CASUAL-AMARELA-6287.jpg?v=638337731368100000');
 
--- Produto 23: Camisa Estampada Tropical
+-- Produto 14: Camisa Estampada Tropical
 INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
-VALUES (23, 
+VALUES (14, 
 'https://lojausereserva.vtexassets.com/arquivos/ids/7212382-1200-auto?v=638042223161600000&width=1200&height=auto&aspect=true', 
 'https://lojausereserva.vtexassets.com/arquivos/ids/7212380-1200-auto?v=638042223161300000&width=1200&height=auto&aspect=true', 
 'https://lojausereserva.vtexassets.com/arquivos/ids/7212389-1200-auto?v=638042223162070000&width=1200&height=auto&aspect=true');
 
--- Produto 24: Camisa Jeans Masculina
+-- Produto 15: Camisa Jeans Masculina
 INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
-VALUES (24, 
+VALUES (15, 
 'https://img.ltwebstatic.com/images3_spmp/2024/08/27/14/1724689424f9ad38123ba9cd96fe5a06b136c1196e_thumbnail_405x.webp', 
 'https://img.ltwebstatic.com/images3_spmp/2024/08/27/14/17246894247cb1912ecf3627e1807f78b392174240_thumbnail_560x.webp', 
 'https://img.ltwebstatic.com/images3_spmp/2024/08/27/14/172468942407a8ed4406c1f786a4818266fed89025_thumbnail_560x.webp');
 
--- Produto 25: Camisa Básica Algodão
+-- Produto 16: Camisa Básica Algodão
 INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
-VALUES (25, 
+VALUES (16, 
 'https://www.lojamirante.com.br/uploads/dirImage/14/524x520_8936500b9f0cd4f08502b834a013f80d.webp', 
 'https://www.lojamirante.com.br/uploads/dirImage/14/524x520_5e423dba7c7ee468524f7b1af9053910.webp', 
 'https://www.lojamirante.com.br/uploads/dirImage/115/524x520_dd0888f385b85653dcf1b518e81c2a5f.webp');
 
--- Produto 26: Camisa Oversized Unissex
+-- Produto 17: Camisa Oversized Unissex
 INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
-VALUES (26, 
+VALUES (17, 
 'https://img.ltwebstatic.com/v4/j/spmp/2025/04/26/d2/174563308529471cef5ad13a91dc7ca33412ccf7cf_thumbnail_405x.webp', 
 'https://img.ltwebstatic.com/v4/j/spmp/2025/04/26/0f/174563298203704983417d348fcc1616101f4ca66e_thumbnail_560x.webp', 
 'https://img.ltwebstatic.com/v4/j/spmp/2025/04/26/a3/1745632982b2d0a7b68a47589e3d39599195b539bb_thumbnail_560x.webp');
 
--- Produto 27: Camisa Esportiva Dry
+-- Produto 18: Camisa Esportiva Dry
 INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
-VALUES (27, 
+VALUES (18, 
 'https://www.lojamirante.com.br/uploads/dirImage/16/524x520_d96afacb3e538b5a29264afe14d0d401.webp', 
 'https://www.lojamirante.com.br/uploads/dirImage/16/524x520_ac001871013b5a6764f5b072267c8915.webp', 
 'https://www.lojamirante.com.br/uploads/dirImage/16/524x520_417b8972298388be68431e1517a835eb.webp');
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- Bermuda
+-- Produto 19: Bermuda Jeans Tradicional
+INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
+VALUES (19, 
+'https://http2.mlstatic.com/D_NQ_NP_2X_988197-MLB31117217678_062019-F-bermuda-jeans-desconto-envio-imediato-24-horas.webp', 
+'https://img.lojasrenner.com.br/item/929322148/original/13.jpg', 
+'https://img.lojasrenner.com.br/item/929322148/original/14.jpg');
+
+-- Produto 20: Bermuda Moletom Basic
+INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
+VALUES (20, 
+'https://www.knulu.com.br/media/catalog/product/cache/1/thumbnail/717x900/9df78eab33525d08d6e5fb8d27136e95/k/n/knulu-moda-masculina-2022-270.jpg', 
+'https://www.knulu.com.br/media/catalog/product/cache/1/thumbnail/717x900/9df78eab33525d08d6e5fb8d27136e95/k/n/knulu-moda-masculina-2022-272.jpg', 
+'https://www.knulu.com.br/media/catalog/product/cache/1/thumbnail/717x900/9df78eab33525d08d6e5fb8d27136e95/k/n/knulu-moda-masculina-2022-273.jpg');
+
+-- Produto 21: Bermuda Sarja Slim
+INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
+VALUES (21, 
+'https://storetng.vteximg.com.br/arquivos/ids/471055-0-0/BNMBCH01_504_1-BERMUDA-CHINO-SLIM-COLOR.jpg?v=638350740080870000', 
+'https://storetng.vteximg.com.br/arquivos/ids/471061-0-0/BNMBCH01_504_2-BERMUDA-CHINO-SLIM-COLOR.jpg?v=638350740210070000', 
+'https://storetng.vteximg.com.br/arquivos/ids/471067-0-0/BNMBCH01_504_3-BERMUDA-CHINO-SLIM-COLOR.jpg?v=638350740318600000');
+
+-- Produto 22: Bermuda Tática Militar
+INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
+VALUES (22, 
+'https://produtgy.com.br/cdn/shop/products/5df9b61093ca13a7b9e5ba88fd2d749d_c65df500-b45c-4e19-af85-9040befa6c19_600x.jpg?v=1656427625', 
+'https://produtgy.com.br/cdn/shop/products/9_e75c7275_df5a_46b2_32LCa_400x.jpg?v=1656427625', 
+'https://produtgy.com.br/cdn/shop/products/h172c6d5143824b94835_bHaGa_600x.jpg?v=1656427625');
+
+-- Produto 23: Bermuda Surf Estampada
+INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
+VALUES (23, 
+'https://trackfield.vtexassets.com/arquivos/ids/254277-1200-1677?v=638052641501630000&width=1200&height=1677&aspect=true', 
+'https://trackfield.vtexassets.com/arquivos/ids/254279-1200-1677?v=638052641803570000&width=1200&height=1677&aspect=true', 
+'https://trackfield.vtexassets.com/arquivos/ids/254280-1200-1677?v=638052641898200000&width=1200&height=1677&aspect=true');
+
+-- Produto 24: Bermuda Ciclista
+INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
+VALUES (24, 
+'https://http2.mlstatic.com/D_NQ_NP_2X_775897-MLB74766388941_022024-F-bermuda-ciclismo-masculina-free-force-basic-preto.webp', 
+'https://http2.mlstatic.com/D_NQ_NP_2X_743238-MLB74766388935_022024-F-bermuda-ciclismo-masculina-free-force-basic-preto.webp', 
+'https://http2.mlstatic.com/D_NQ_NP_2X_628314-MLB74637267040_022024-F-bermuda-ciclismo-masculina-free-force-basic-preto.webp');
+
+-- Produto 25: Bermuda Cargo Masculina
+INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
+VALUES (25, 
+'https://montevie.com/cdn/shop/files/S623cc369829f4377b04df0cbbc81a842q_800x.webp?v=1725980792', 
+'https://montevie.com/cdn/shop/files/Sd5ec47450dba485591ea8f46765add58r_800x.webp?v=1725980792', 
+'https://montevie.com/cdn/shop/files/S857d499874384c15aa34067f9e94e253R_800x.webp?v=1725980789');
+
+-- Produto 26: Bermuda Infantil Super-Heróis
+INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
+VALUES (26, 
+'https://torratorra.vteximg.com.br/arquivos/ids/2253328-960-1200/352310001310938.jpg?v=638751963212330000', 
+'https://torratorra.vteximg.com.br/arquivos/ids/2253330-960-1200/352310001310938.jpg?v=638751963249270000', 
+'https://torratorra.vteximg.com.br/arquivos/ids/2253331-960-1200/352310001310938.jpg?v=638751963267670000');
+
+-- Produto 27: Bermuda Fitness DryFit
+INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
+VALUES (27, 
+'https://www.gsuplementos.com.br/upload/produto/imagem/shorts-de-treino-growth-growth-supplements-1.webp', 
+'https://www.lojamirante.com.br/uploads/dirImage/79/524x520_5d8d0a4306572d488c540caaca4b2e96.webp', 
+'https://www.lojamirante.com.br/uploads/dirImage/79/524x520_b7d52b94d17cb6090e8d1256f93a4ec7.webp');
+
+
+-- Moletom 
 -- Produto 28: Moletom Capuz Básico
 INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
 VALUES (28, 
@@ -488,6 +503,18 @@ VALUES (36,
 'https://img.ltwebstatic.com/images3_pi/2024/12/04/4e/17333043245fa2f4fdfe00c07295365bd25040e5f3_thumbnail_405x.webp', 
 'https://img.ltwebstatic.com/images3_pi/2024/07/19/b6/1721360471dc94faeb872ede800d4d4ff77803c853_thumbnail_560x.webp', 
 'https://img.ltwebstatic.com/images3_pi/2024/07/19/7f/17213604868d55fe7058b35c7731e280c10e28adf5_thumbnail_560x.webp');
+
+CREATE TABLE tb_avaliacao (
+    cod_avaliacao INT PRIMARY KEY AUTO_INCREMENT,
+    cod_usuario INT NOT NULL,
+    cod_produto INT NOT NULL,
+    comentario TEXT NOT NULL,
+    data_comentario DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (cod_usuario) REFERENCES tb_usuario(cod_usuario),
+    FOREIGN KEY (cod_produto) REFERENCES tb_produto(cod_produto)
+);
+
+
 
 
 -- Fotos dos produtos Moletons, só mostrar todos os produtos 

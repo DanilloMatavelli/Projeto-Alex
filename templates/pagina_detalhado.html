@@ -1,48 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Loja | Produto Detalhado</title>
 
- 
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-  
+
   <link rel="stylesheet" href="/static/css/reset.css" />
   <link rel="stylesheet" href="/static/css/variables.css" />
 
-  
+
   <link rel="stylesheet" href="/static/css/main_pag_detalhado.css" />
 
- 
+
   <link rel="stylesheet" href="/static/css/header.css" />
   <link rel="stylesheet" href="/static/css/footer.css" />
 
- 
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <!-- Link do carrosel bootsrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
 
- 
+
+
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
 
   <style>
     .produto {
       padding: 3rem 1rem;
     }
+
     .produto__imagem {
       width: 100%;
       max-height: 400px;
       object-fit: cover;
       border-radius: 8px;
     }
+
     .produto__titulo {
       font-size: 1.8rem;
       font-weight: bold;
       margin-bottom: 0.5rem;
     }
+
     .produto__preco {
       font-size: 1.25rem;
       color: #555;
@@ -50,6 +59,7 @@
       margin-top: 5rem;
       text-align: center;
     }
+
     .produto__btn {
       background-color: #512da8;
       color: #fff;
@@ -59,25 +69,31 @@
       margin-left: auto;
       margin-right: auto;
     }
+
     .produto__btn:hover {
       background-color: #311b92;
     }
+
     .comentario__form {
       margin-top: 15rem;
     }
+
     .avaliacoes {
       margin-top: 3rem;
     }
+
     .avaliacoes__titulo {
       font-weight: bold;
       margin-bottom: 1rem;
     }
+
     .avaliacao-card {
       background-color: #f3e5f5;
       border-radius: 8px;
       padding: 1rem;
       margin-bottom: 1rem;
     }
+
     @media (max-width: 768px) {
       .produto__titulo {
         font-size: 1.5rem;
@@ -88,48 +104,89 @@
 
 <body>
 
-    {% include 'header.html' %}
+  {% include 'header.html' %}
 
-    <div class="container produto">
-        <div class="row g-4 align-items-start">
-            
+  <div class="container produto">
+    <div class="row g-5 align-items-start">
 
-
-            <div class="col-md-6">
-                <h1 class="produto__titulo">{{ produto.nome }}</h1>
-                <p class="produto__preco">R$ {{ produto.preco }}</p>
-                <p class="produto__descricao">{{ produto.descricao }}</p>
-
-               
-                <form action="{{ url_for('rota_adicionar_carrinho') }}" method="POST">
-                    <input type="hidden" name="cod_produto" value="{{ produto.cod_produto }}" />
-                    <input type="hidden" name="quantidade" value="1" />
-                    <button type="submit" class="btn produto__btn mb-4">Adicionar ao carrinho</button>
-                </form>
+      <!-- Coluna da imagem (lado esquerdo) -->
+      <div class="col-md-6">
+        <div id="carouselExampleIndicators" class="carousel slide mb-4" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            {% for i in range(imagens|length) %}
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ i }}" {% if i==0
+              %}class="active" {% endif %}></button>
+            {% endfor %}
+          </div>
+          <div class="carousel-inner">
+            {% for img_url in imagens %}
+            <div class="carousel-item {% if loop.first %}active{% endif %}">
+              <img src="{{ img_url }}" class="d-block w-100 produto__imagem" alt="Imagem {{ loop.index }}">
             </div>
+            {% endfor %}
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Próximo</span>
+          </button>
         </div>
+
+      </div>
+
+      <!-- Coluna das informações e botão (lado direito) -->
+      <div class="col-md-6">
+        <h1 class="produto__titulo">{{ produto.nome }}</h1>
+        <p class="produto__preco">R$ {{ produto.preco }}</p>
+        <p class="produto__descricao">{{ produto.descricao }}</p>
+
+        <form action="{{ url_for('rota_adicionar_carrinho') }}" method="POST">
+          <input type="hidden" name="cod_produto" value="{{ produto.cod_produto }}">
+          <input type="hidden" name="quantidade" value="1">
+          <button type="submit" class="btn produto__btn mt-4">Adicionar ao carrinho</button>
+        </form>
+      </div>
+
     </div>
+  </div>
 
-    <div class="avaliacoes">
-        <h4 class="avaliacoes__titulo">Avaliações</h4>
 
-        <div class="avaliacao-card">
-            <strong>Miguel Câmara</strong>
-            <p>Excelente bermuda!</p>
-        </div>
+  <div class="avaliacoes container">
+    <h4 class="avaliacoes__titulo">Adicionar comentário</h4>
 
-        <div class="avaliacao-card">
-            <strong>Arthur Rampazi</strong>
-            <p>Não gostei, muito curto</p>
-        </div>
+    <!-- Formulário para enviar nova avaliação -->
+    <form action="{{ url_for('enviar_comentario') }}" method="POST" class="mb-4">
+      <input type="hidden" name="cod_produto" value="{{ produto.cod_produto }}">
+      <textarea name="comentario" class="form-control" rows="3" placeholder="Escreva seu comentário..."></textarea>
+      <button type="submit" class="btn btn-primary mt-2">Enviar avaliação</button>
+    </form>
 
-        <div class="avaliacao-card">
-            <strong>Miguel Luís</strong>
-            <p>Lindo shorts, porém chegou depois do prazo</p>
-        </div>
+
+    <!-- Lista de avaliações -->
+    <!-- Lista de avaliações -->
+    <h4 class="avaliacoes__titulo">Avaliações</h4>
+
+    {% if comentarios %}
+    {% for c in comentarios %}
+    <div class="avaliacao-card">
+      <strong>{{ c.nome }}</strong>
+      <p>{{ c.comentario }}</p>
     </div>
+    {% endfor %}
+    {% else %}
+    <p class="text-muted">Nenhuma avaliação ainda.</p>
+    {% endif %}
 
-    {% include 'footer.html' %}
+  </div>
+
+
+  {% include 'footer.html' %}
 
 </body>
+
 </html>

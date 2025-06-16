@@ -1,0 +1,15 @@
+
+
+.btn-primary{
+    background-color: var(--cor-gradient-2);
+}
+
+.btn-primary:hover{
+    background-color: var(--cor-gradient-2);
+
+    color: var(--preto);
+}
+
+.avaliacao-card{
+    background-color: var(--cor-botoes) !important;
+}

@@ -33,60 +33,57 @@
 
   {% include 'header.html' %}
 
-  <main class="main-content">
+  <main class="pagina__conteudo">
 
-    <section class="carrossel">
- <div id="carouselExampleIndicators" class="carrossel__container carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    {% for i in range(imagens|length) %}
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ i }}" {% if i == 0 %}class="active"{% endif %} aria-current="true" aria-label="Slide {{ i + 1 }}"></button>
-    {% endfor %}
-  </div>
-  <div class="carousel-inner">
-    {% for img_url in imagens %}
-      <div class="carousel-item {% if loop.index0 == 0 %}active{% endif %}">
-        <img src="{{ img_url }}" class="d-block w-100" alt="Slide {{ loop.index }}">
+  <section class="pagina__carrossel">
+    <div id="carouselExampleIndicators" class="pagina__carrossel-container carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        {% for i in range(imagens|length) %}
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ i }}" {% if i == 0 %}class="active"{% endif %} aria-current="true" aria-label="Slide {{ i + 1 }}"></button>
+        {% endfor %}
       </div>
-    {% endfor %}
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Anterior</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Próximo</span>
-  </button>
-</div>
-
-</section>
-
-
-    <section class="categorias">
-      <div class="categorias__container">
-        <h2 class="categorias__titulo">Categorias</h2>
-        <div class="categorias__botoes">
-<button class="btn btn-outline-primary">
-    <a href="{{ url_for('produtos', cod_categoria=1) }}">Calçados</a>
-</button>
-<button class="btn btn-outline-primary">
-    <a href="{{ url_for('produtos', cod_categoria=2) }}">Camisas</a>
-</button>
-<button class="btn btn-outline-primary">
-    <a href="{{ url_for('produtos', cod_categoria=3) }}">Bermudas</a>
-</button>
-<button class="btn btn-outline-primary">
-    <a href="{{ url_for('produtos', cod_categoria=4) }}">Moletons</a>
-</button>
-<button class="btn btn-outline-secondary">
-    <a href="{{ url_for('produtos', cod_categoria=5) }}">Todos</a>
-</button>
-
-        </div>
+      <div class="carousel-inner">
+        {% for img_url in imagens %}
+          <div class="carousel-item {% if loop.index0 == 0 %}active{% endif %}">
+            <img src="{{ img_url }}" class="d-block w-100" alt="Slide {{ loop.index }}">
+          </div>
+        {% endfor %}
       </div>
-    </section>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Próximo</span>
+      </button>
+    </div>
+  </section>
 
-  </main>
+  <section class="pagina__categorias">
+    <div class="pagina__categorias-container">
+      <h2 class="pagina__categorias-titulo">Categorias</h2>
+      <div class="pagina__categorias-botoes">
+        <button class="btn btn-outline-primary">
+          <a href="{{ url_for('produtos', cod_categoria=1) }}">Calçados</a>
+        </button>
+        <button class="btn btn-outline-primary">
+          <a href="{{ url_for('produtos', cod_categoria=2) }}">Camisas</a>
+        </button>
+        <button class="btn btn-outline-primary">
+          <a href="{{ url_for('produtos', cod_categoria=3) }}">Bermudas</a>
+        </button>
+        <button class="btn btn-outline-primary">
+          <a href="{{ url_for('produtos', cod_categoria=4) }}">Moletons</a>
+        </button>
+        <button class="btn btn-outline-secondary">
+          <a href="{{ url_for('produtos', cod_categoria=5) }}">Todos</a>
+        </button>
+      </div>
+    </div>
+  </section>
+
+</main>
 
   {% include 'footer.html' %}
 

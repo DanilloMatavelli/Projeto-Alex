@@ -39,16 +39,19 @@
 
         <section class="loja__filtros text-center my-3"> 
 
-            <a href="{{ url_for('produtos', cod_categoria=1) }}"><button class="btn btn-outline-primary">Calçados</button></a>
+            <section class="loja__filtros text-center my-3"> 
 
-            <a href="{{ url_for('produtos', cod_categoria=2) }}"><button class="btn btn-outline-primary">Camisas</button></a>
+            <button class="btn btn-outline-primary"><a href="{{ url_for('produtos', cod_categoria=1) }}">Calçados</a></button> 
 
-            <a href="{{ url_for('produtos', cod_categoria=3) }}"><button class="btn btn-outline-primary">Bermudas</button></a>
+            <button class="btn btn-outline-primary"><a href="{{ url_for('produtos', cod_categoria=2) }}">Camisas</a></button> 
 
-            <a href="{{ url_for('produtos', cod_categoria=4) }}"><button class="btn btn-outline-primary">Moletons</button></a>
+            <button class="btn btn-outline-primary"><a href="{{ url_for('produtos', cod_categoria=3) }}">Bermudas</a></button> 
 
-            <a href="{{ url_for('produtos', cod_categoria=5) }}"><button class="btn btn-outline-secondary">Todos</button></a>
+            <button class="btn btn-outline-primary"><a href="{{ url_for('produtos', cod_categoria=4) }}">Moletons</a></button> 
 
+            <button class="btn btn-outline-secondary"><a href="{{ url_for('produtos', cod_categoria=5) }}">Todos</a></button> 
+
+        </section> 
 
             
         </section> 

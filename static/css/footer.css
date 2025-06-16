@@ -44,3 +44,34 @@
     font-size: var(--tamanho-icone);
     color: #ffffff !important;
 }
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .footer__container {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .footer__info {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer__text {
+    margin-top: 0;
+    font-size: 18px;
+  }
+
+  .footer__social {
+    justify-content: center;
+    gap: 30px;
+    padding-right: 0;
+  }
+}

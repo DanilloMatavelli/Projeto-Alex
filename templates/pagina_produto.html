@@ -65,36 +65,37 @@
             {% else %} Todos {% endif %}
         </h2>
 
-        <section class="loja__produtos container">
-            <div class="row g-4">
-                {% for produto in produtos %}
-                    <div class="col-md-4">
-                        <div class="card loja__card text-center p-2">
-                            <a href="{{ url_for('produto_detalhado', cod_produto=produto.cod_produto) }}" style="text-decoration: none; color: inherit;">
-                                <img src="{{ produto.imagem_principal }}" class="card-img-top loja__card-img" alt="{{ produto.nome }}">
-                                <div class="card-body">
-                                    <h5 class="card-title">{{ produto.nome }}</h5>
-                                    <p class="card-text">{{ produto.descricao }}</p>
-                                    <p class="card-text fw-bold">R$ {{ produto.preco }}</p>
-                                </div>
-                            </a>
-                            <div class="loja__miniaturas">
-                                {% if produto.url_foto1 %}
-                                    <img src="{{ produto.url_foto1 }}" class="miniatura-img">
-                                {% endif %}
-                                {% if produto.url_foto2 %}
-                                    <img src="{{ produto.url_foto2 }}" class="miniatura-img">
-                                {% endif %}
-                                {% if produto.url_foto3 %}
-                                    <img src="{{ produto.url_foto3 }}" class="miniatura-img">
-                                {% endif %}
-                            </div>
-                        </div>
-                    </div>
-                {% endfor %}
+            <section class="loja__produtos container">
+  <div class="row g-4">
+    {% for produto in produtos %}
+      <div class="col-sm-6 col-md-4 col-lg-3 d-flex">
+        <div class="card loja__card text-center p-2 w-100">
+          <a href="{{ url_for('produto_detalhado', cod_produto=produto.cod_produto) }}" style="text-decoration: none; color: inherit;">
+            <img src="{{ produto.imagem_principal }}" class="card-img-top loja__card-img" alt="{{ produto.nome }}">
+            <div class="card-body">
+              <h5 class="card-title">{{ produto.nome }}</h5>
+              <p class="card-text">{{ produto.descricao }}</p>
+              <p class="card-text fw-bold">R$ {{ produto.preco }}</p>
             </div>
-        </section>
-    </main>
+          </a>
+          <div class="loja__miniaturas">
+            {% if produto.url_foto1 %}
+              <img src="{{ produto.url_foto1 }}" class="miniatura-img">
+            {% endif %}
+            {% if produto.url_foto2 %}
+              <img src="{{ produto.url_foto2 }}" class="miniatura-img">
+            {% endif %}
+            {% if produto.url_foto3 %}
+              <img src="{{ produto.url_foto3 }}" class="miniatura-img">
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+        </main>
 
     {% include 'footer.html' %}
 

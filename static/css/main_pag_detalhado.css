@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 .btn-primary{
@@ -13,3 +14,76 @@
 .avaliacao-card{
     background-color: var(--cor-botoes) !important;
 }
+=======
+/* Estrutura geral */
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+.produto {
+  padding: 3rem 1rem;
+}
+
+.produto__imagem {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.produto__titulo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.produto__preco {
+  font-size: 1.25rem;
+  color: #555;
+  margin-bottom: 1.2rem;
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.produto__btn {
+  background-color: #512da8;
+  color: #fff;
+  border: none;
+  margin-top: 5rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.produto__btn:hover {
+  background-color: #311b92;
+}
+
+/* Comentários */
+.avaliacoes {
+  margin-top: 3rem;
+}
+
+.avaliacoes__titulo {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.avaliacoes__form {
+  margin-bottom: 2rem;
+}
+
+.avaliacao-card {
+  background-color: #f3e5f5;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .produto__titulo {
+    font-size: 1.5rem;
+  }
+}
+>>>>>>> 926d7ff5e9f8a909e204400f1fbfdbb02b8e551e

@@ -1,11 +1,11 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-size: 24px;
 }
 
-.footer{
+.footer {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -15,33 +15,6 @@
     background: var(--header-footer);
 }
 
-.footer__container{
-    display: flex;
-}
-
-
-.footer__info{
-    display: flex;
-    color: var(--branco);
-    text-shadow: 2px 2px var(--preto);
-}
-
-.wpp-icon, .inst-icon, .face-icon{
-    width: 40px;
-    height: 40px;
-
-}
-
-.icons2{
-    display: flex;
-    width: auto;
-    height: auto;
-    gap: 50px;
-    justify-content: end;
-    padding-right: 0px;
-
-}
-
 .footer__container {
     display: flex;
     justify-content: space-between;
@@ -49,12 +22,25 @@
     width: 100%;
 }
 
+.footer__info {
+    display: flex;
+    color: var(--branco);
+    text-shadow: 2px 2px var(--preto);
+}
 
-p{
+.footer__text {
     margin-top: 25px;
     font-size: 20px;
 }
 
-.fa-brands{
+.footer__social {
+    display: flex;
+    gap: 50px;
+    justify-content: end;
+    padding-right: 0px;
+}
+
+.footer__icon i {
     font-size: var(--tamanho-icone);
+    color: #ffffff !important;
 }

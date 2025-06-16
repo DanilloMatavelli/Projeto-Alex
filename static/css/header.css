@@ -1,17 +1,17 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.main-header{
+.header {
     display: flex;
     width: 100%;
     height: 100px;
     background: var(--header-footer);
 }
 
-.header-left{
+.header__left {
     display: flex;
     width: 50%;
     height: auto;
@@ -19,9 +19,7 @@
     align-items: center;
 }
 
-
-
-.header-right{
+.header__right {
     width: 50%;
     height: auto;
     display: flex;
@@ -29,45 +27,55 @@
     justify-content: end;
 }
 
-
-.icons{
+.header__icons {
     display: flex;
     padding-right: 40px;
     gap: 50px;
     color: var(--branco);
 }
 
-.material-icons{
-    font-size: 50px !important;
-    color: var(--branco);
+.header__logo {
+    display: flex;
+    align-items: center;
 }
 
-a{
-    color: var(--preto);
+.header__logo a {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
 }
 
-.gpt{
+.header__logo-gpt {
     color: var(--cor-logo-GPT);
     text-shadow: 2px 2px var(--preto);
     font-size: 40px;
 }
 
-.rio{
+.header__logo-rio {
     color: var(--branco);
     text-shadow: 2px 2px var(--preto);
     font-size: 35px;
 }
 
-.logo a {
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  line-height: 1;
+.header__saudacao {
+    color: var(--branco);
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.material-icons {
+    font-size: 50px !important;
+    color: var(--branco);
+}
+
+a {
+    color: var(--preto);
 }
 
 .material-icons,
 .fa-facebook,
 .fa-whatsapp {
-  color: white !important;
+    color: white !important;
 }
-

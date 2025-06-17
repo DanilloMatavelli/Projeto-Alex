@@ -5,7 +5,7 @@ Bem-vindo ao repositório oficial da **GPTrio**, uma loja virtual de roupas e ca
 ---
 ## 📸 Demonstração
 
-🔗 Acesse a versão online: 
+🔗 Acesse a versão online: https://gptrio.onrender.com
 
 ---
 

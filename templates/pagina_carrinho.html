@@ -27,8 +27,8 @@
 
   <main>
     <div class="container mt-4">
-      <div class="bg-light rounded-4 p-4 shadow">
-        <div class="row">
+      <div class="bg-light rounded-4 p-4 shadow w-100">
+        <div class="row justify-content-center">
 
           <!-- Coluna: Itens do carrinho -->
           <div class="col-lg-8 mb-4">
@@ -67,7 +67,11 @@
               {% endfor %}
             </div>
             {% else %}
-            <p>Seu carrinho está vazio.</p>
+            <div class="card carrinho-card p-4 text-center">
+              <h5 class="fw-bold mb-2">Seu carrinho está vazio!</h5>
+              <p class="text-muted mb-3">Adicione produtos para visualizar aqui.</p>
+              <a href="/produtos/5" class="btn btn-ver-mais w-50">Ver produtos</a>
+            </div>
             {% endif %}
           </div>
 
@@ -77,11 +81,11 @@
 
             <div class="card resumo-card">
               <div class="mb-4">
-                <strong class="fs-6">Valor Total: US$
+                <strong class="fs-5">Valor Total: US$
                   {% if itens|length > 0 %}
                   {{ "%.2f"|format(itens[0].total) }}
                   {% else %}
-                  0,00
+                  0.00
                   {% endif %}
                 </strong>
               </div>

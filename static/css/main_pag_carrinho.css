@@ -1,7 +1,3 @@
-
-
-
-
 html, body {
   height: 100%;
   margin: 0;
@@ -19,9 +15,8 @@ main {
 }
 
 .container {
-  display: flex;
-  gap: 30px;
-  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
 }
 
 .rounded-4 {
@@ -56,13 +51,14 @@ main {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Botões */
+/* Botões principais */
 .btn-primary {
   background-color: var(--cor-botoes) !important;
   border: 2px solid var(--preto) !important;
   color: var(--preto) !important;
   height: 50px;
   font-weight: 600;
+  font-size: 1rem;
 }
 
 .btn-primary:hover {
@@ -70,10 +66,28 @@ main {
   color: var(--preto) !important;
 }
 
+/* Botão "Ver produtos" com contraste */
+.btn-ver-mais {
+  background-color: var(--cor-gradient-3);
+  border: 2px solid var(--preto);
+  color: var(--branco);
+  height: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 10px;
+}
 
-/* footer */
+.btn-ver-mais:hover {
+  background-color: var(--cor-gradient-2);
+  color: var(--branco);
+}
 
+/* Botão excluir */
+.btn-danger {
+  border-radius: 10px;
+}
 
+/* Footer */
 .footer {
   background-color: var(--cor-gradient-1);
   padding: 1rem 2rem;
@@ -86,3 +100,20 @@ main {
   color: white !important;
 }
 
+/* Responsivo */
+@media (max-width: 768px) {
+  .produto-imagem {
+    width: 80px;
+    height: 80px;
+  }
+
+  .btn-primary,
+  .btn-ver-mais {
+    font-size: 0.9rem;
+    height: 45px;
+  }
+
+  .carrinho-card, .resumo-card {
+    padding: 15px;
+  }
+}

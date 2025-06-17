@@ -14,7 +14,6 @@ Bem-vindo ao repositório oficial da **GPTrio**, uma loja virtual de roupas e ca
 - **Frontend**:
   - HTML5
   - CSS3 (com Bootstrap 5)
-  - JavaScript (puro)
 - **Backend**:
   - Python 3 (Flask)
 - **Banco de Dados**:

@@ -1,0 +1,12 @@
+-- INSERT PARA ADICIONAR UM NOVO PRODUTO
+INSERT INTO tb_produto (nome, descricao, preco, cod_categoria) 
+VALUES ('Tênis Esportivo NIKE', 'Tênis confortável para corrida.', 299.99, 1);
+
+INSERT INTO tb_foto_produto (cod_produto, url) 
+VALUES (37, 'https://imgnike-a.akamaihd.net/768x768/027920A1A1.jpg');
+
+INSERT INTO tb_produto_detalhado (cod_produto, url_foto1, url_foto2, url_foto3)
+VALUES (37, 
+'https://imgnike-a.akamaihd.net/768x768/027920A1A1.jpg', 
+'https://imgnike-a.akamaihd.net/768x768/027920A1A4.jpg', 
+'https://imgnike-a.akamaihd.net/768x768/027920A1A3.jpg');

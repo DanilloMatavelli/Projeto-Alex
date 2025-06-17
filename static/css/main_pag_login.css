@@ -1,42 +1,73 @@
-*{
-    font-family: "Nunito", sans-serif;
+* {
+  font-family: "Nunito", sans-serif;
 }
 
-.header {
-  background-color: var(--cor-gradient-1);
-  padding: 1rem 2rem;
-  color: var(--branco);
-}
-
+.header,
 .footer {
   background-color: var(--cor-gradient-1);
   padding: 1rem 2rem;
   color: var(--branco);
 }
 
-.btn{
+.btn {
   display: flex;
   justify-content: center;
   align-items: center;
   color: var(--preto);
   border: 2px solid var(--preto);
-  width: 558px;
-  height: 60px;
+  width: 100%;
+  max-width: 558px;
+  height: 50px;
   background-color: var(--cor-botoes);
+  font-size: 18px;
 }
 
-.btn:hover{
+.btn:hover {
   background-color: var(--hover-botoes);
   color: var(--preto);
   border: 2px solid var(--preto);
 }
 
-.formulario__input{
-  width: 536px;
-  height: 60px;
-  font-size: 20px;
+.formulario__input {
+  width: 100%;
+  max-width: 536px;
+  height: 50px;
+  font-size: 18px;
 }
 
-.formulario__title{
+.formulario__title {
   font-size: 30px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .formulario__input {
+    font-size: 16px;
+    height: 45px;
+  }
+
+  .btn {
+    height: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  .formulario__title {
+    font-size: 24px;
+  }
+
+  .formulario__input {
+    font-size: 14px;
+    height: 40px;
+  }
+
+  .btn {
+    font-size: 16px;
+    height: 40px;
+  }
 }
